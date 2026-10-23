@@ -3,7 +3,7 @@ import json
 import random
 import datetime
 from pathlib import Path
-from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi import FastAPI, HTTPException, Query, Request, File, UploadFile, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -500,4 +500,86 @@ def sync_order_to_deodap(order_id: str):
         "status": "In Transit",
         "tracking_number": new_tracking,
         "message": f"Order {order_id} synced directly to DeoDap fulfillment center! Shipped via BlueDart/Delhivery."
+    }
+
+@app.post("/api/admin/upload-image")
+async def upload_product_image(file: UploadFile = File(...)):
+    """Upload product photos directly into the web application"""
+    allowed_extensions = {".jpg", ".jpeg", ".png", ".webp", ".gif"}
+    ext = os.path.splitext(file.filename)[1].lower()
+    if ext not in allowed_extensions:
+        raise HTTPException(status_code=400, detail="Invalid image type. Allowed: jpg, jpeg, png, webp, gif")
+
+    products_dir = STATIC_DIR / "images" / "products"
+    products_dir.mkdir(parents=True, exist_ok=True)
+
+    import uuid
+    safe_name = f"prod_{uuid.uuid4().hex[:10]}{ext}"
+    dest_path = products_dir / safe_name
+
+    contents = await file.read()
+    with open(dest_path, "wb") as f:
+        f.write(contents)
+
+    rel_url = f"/static/images/products/{safe_name}"
+    return {
+        "success": True,
+        "filename": safe_name,
+        "url": rel_url,
+        "message": "Product image uploaded successfully!"
+    }
+
+@app.get("/api/admin/uploaded-images")
+def list_uploaded_images():
+    """List all uploaded product images"""
+    products_dir = STATIC_DIR / "images" / "products"
+    if not products_dir.exists():
+        return []
+    images = []
+    for f in os.listdir(products_dir):
+        if f.lower().endswith(('.jpg', '.jpeg', '.png', '.webp', '.gif')):
+            images.append({
+                "filename": f,
+                "url": f"/static/images/products/{f}"
+            })
+    return images
+
+@app.post("/api/admin/add-product")
+async def add_new_product(
+    title: str = Form(...),
+    category: str = Form(...),
+    wholesale_price: float = Form(...),
+    selling_price: float = Form(...),
+    mrp: float = Form(...),
+    stock: int = Form(50),
+    badge: str = Form("New Arrival ⭐"),
+    description: str = Form(...),
+    image_url: str = Form(...)
+):
+    """Add a new product with uploaded image directly to catalog"""
+    conn = get_db()
+    cursor = conn.cursor()
+    import uuid
+    prod_id = f"SAGA-NEW-{uuid.uuid4().hex[:6].upper()}"
+    slug = title.lower().replace(" ", "-").replace("/", "-")[:50]
+
+    cursor.execute("""
+    INSERT INTO products (
+        id, title, slug, category, deodap_sku, wholesale_price, selling_price,
+        mrp, stock, rating, review_count, badge, description, features_json,
+        image_url, gallery_json, is_trending
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        prod_id, title, slug, category, f"DD-NEW-{uuid.uuid4().hex[:6].upper()}",
+        wholesale_price, selling_price, mrp, stock, 4.8, 15, badge, description,
+        json.dumps(["Direct Sourced High Quality", "Fast Express Shipping"]),
+        image_url, json.dumps([image_url]), 1
+    ))
+    conn.commit()
+    conn.close()
+
+    return {
+        "success": True,
+        "product_id": prod_id,
+        "message": f"Product '{title}' added to store successfully!"
     }

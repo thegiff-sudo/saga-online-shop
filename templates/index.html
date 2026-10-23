@@ -217,38 +217,108 @@
           </div>
         </div>
 
-        <!-- Right: Featured Promo Card -->
+        <!-- Right: Interactive Hero Showcase Carousel -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-3xl shadow-2xl max-w-sm w-full relative">
-            <div class="absolute -top-3 -right-3 bg-amber-400 text-blue-950 font-black text-xs px-3 py-1 rounded-full shadow-md uppercase tracking-wide">
-              Top Trending
-            </div>
-            <div class="w-full h-52 bg-white rounded-2xl overflow-hidden mb-4 p-4 flex items-center justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&q=80" 
-                alt="Astronaut Galaxy Projector" 
-                class="max-h-full object-contain"
-              />
-            </div>
-            <div class="space-y-2">
-              <div class="flex items-center justify-between text-xs text-amber-300 font-bold">
-                <span>Astronaut Galaxy Starry Light</span>
-                <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">52% OFF</span>
+          <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-4 sm:p-5 rounded-3xl shadow-2xl max-w-md w-full relative group">
+            
+            <!-- Carousel Container -->
+            <div class="relative overflow-hidden rounded-2xl aspect-square w-full shadow-inner bg-slate-900/40">
+              
+              <!-- Slide 1: 3-Tier Essentials Banner -->
+              <div class="hero-carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 flex items-center justify-center cursor-pointer" onclick="selectCategory('fitness-care')">
+                <img 
+                  src="/static/images/banners/banner_3tier_essentials.jpg" 
+                  alt="Saga Online Store - Baby, Kids, Home & Fitness Essentials" 
+                  class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+                />
+                <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md text-white p-2.5 rounded-xl flex items-center justify-between border border-white/10">
+                  <div>
+                    <div class="text-[11px] font-bold text-amber-300">Featured Department</div>
+                    <div class="text-xs font-black">Baby, Kids, Home & Fitness</div>
+                  </div>
+                  <span class="px-2.5 py-1 bg-amber-400 text-blue-950 font-black text-[10px] rounded-lg">Explore</span>
+                </div>
               </div>
-              <h4 class="text-base font-extrabold text-white">360° Remote Controlled Nebula Sky</h4>
-              <div class="flex items-baseline space-x-2">
-                <span class="text-2xl font-black text-white">₹1,199</span>
-                <span class="text-xs text-slate-400 line-through">₹2,499</span>
-                <span class="text-xs text-emerald-300 font-bold">Save ₹1,300</span>
+
+              <!-- Slide 2: Baby & Home Diagonal Banner -->
+              <div class="hero-carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex items-center justify-center cursor-pointer" onclick="selectCategory('baby-kids')">
+                <img 
+                  src="/static/images/banners/banner_baby_home_diagonal.jpg" 
+                  alt="Saga Online Store - Baby, Kids & Home Essentials" 
+                  class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+                />
+                <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md text-white p-2.5 rounded-xl flex items-center justify-between border border-white/10">
+                  <div>
+                    <div class="text-[11px] font-bold text-amber-300">Trending Now</div>
+                    <div class="text-xs font-black">Baby & Kids Care Essentials</div>
+                  </div>
+                  <span class="px-2.5 py-1 bg-amber-400 text-blue-950 font-black text-[10px] rounded-lg">Shop Now</span>
+                </div>
               </div>
+
+              <!-- Slide 3: 3D Circular Department Podium -->
+              <div class="hero-carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex items-center justify-center cursor-pointer" onclick="selectCategory('apparel-hoodies')">
+                <img 
+                  src="/static/images/banners/showcase_3d_circular_podium.jpg" 
+                  alt="Saga Online Store - 3D Department Showcase" 
+                  class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+                />
+                <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md text-white p-2.5 rounded-xl flex items-center justify-between border border-white/10">
+                  <div>
+                    <div class="text-[11px] font-bold text-amber-300">3D Department Hub</div>
+                    <div class="text-xs font-black">Hoodies, Pants, Kids & Kitchen</div>
+                  </div>
+                  <span class="px-2.5 py-1 bg-blue-500 text-white font-black text-[10px] rounded-lg">View All</span>
+                </div>
+              </div>
+
+              <!-- Slide 4: Welcome Story Banner -->
+              <div class="hero-carousel-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none flex items-center justify-center cursor-pointer" onclick="selectCategory('smart-kitchen')">
+                <img 
+                  src="/static/images/banners/banner_welcome_story.jpg" 
+                  alt="Welcome to Saga Online Store" 
+                  class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+                />
+                <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md text-white p-2.5 rounded-xl flex items-center justify-between border border-white/10">
+                  <div>
+                    <div class="text-[11px] font-bold text-emerald-400">Direct From Central Hub</div>
+                    <div class="text-xs font-black">Best Sellers & Fast Delivery</div>
+                  </div>
+                  <span class="px-2.5 py-1 bg-emerald-500 text-white font-black text-[10px] rounded-lg">Discover</span>
+                </div>
+              </div>
+
+              <!-- Next/Prev Buttons -->
               <button 
-                onclick="openProductModal('SAGA-HOM-001')" 
-                class="w-full mt-3 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center space-x-2"
+                onclick="prevHeroSlide(event)" 
+                class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white flex items-center justify-center text-xs backdrop-blur-md transition z-20"
+                title="Previous slide"
               >
-                <span>View Product Details</span>
-                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                <i class="fa-solid fa-chevron-left"></i>
               </button>
+              <button 
+                onclick="nextHeroSlide(event)" 
+                class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white flex items-center justify-center text-xs backdrop-blur-md transition z-20"
+                title="Next slide"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+
+              <!-- Indicators -->
+              <div class="absolute top-3 right-3 flex space-x-1.5 z-20">
+                <span class="carousel-dot w-2 h-2 rounded-full bg-amber-400 transition-all cursor-pointer" onclick="setHeroSlide(0)"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all cursor-pointer" onclick="setHeroSlide(1)"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all cursor-pointer" onclick="setHeroSlide(2)"></span>
+                <span class="carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all cursor-pointer" onclick="setHeroSlide(3)"></span>
+              </div>
+
             </div>
+
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-300">
+              <span class="flex items-center text-amber-300 font-bold"><i class="fa-solid fa-gem mr-1.5"></i> Saga Verified Authentic</span>
+              <span class="text-slate-400 text-[11px]">Tap any slide to explore department</span>
+            </div>
+
           </div>
         </div>
 
@@ -307,6 +377,127 @@
     </div>
   </section>
 
+  <!-- FEATURED 3D CIRCULAR SHOWCASE & BRAND STORY SECTION -->
+  <section class="py-10 bg-gradient-to-b from-white via-slate-50 to-slate-100 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: 3D Circular Department Podium Visual -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-xl relative overflow-hidden group">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-4">
+            <div>
+              <span class="text-xs font-bold text-amber-600 uppercase tracking-widest bg-amber-50 px-2.5 py-1 rounded-md">
+                <i class="fa-solid fa-cube mr-1"></i> Interactive Department Showcase
+              </span>
+              <h3 class="text-xl sm:text-2xl font-black text-slate-900 mt-1">Explore Saga 3D Departments</h3>
+            </div>
+            <span class="text-xs text-slate-400 font-semibold">Tap category to jump</span>
+          </div>
+
+          <!-- 3D Circular Showcase Image -->
+          <div class="relative w-full rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-amber-50/30">
+            <img 
+              src="/static/images/banners/showcase_3d_circular_podium.jpg" 
+              alt="Saga Online Store 3D Department Circular Podium" 
+              class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-60"></div>
+            
+            <div class="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between">
+              <span class="text-xs font-bold bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                ✨ Direct Sourced Catalog
+              </span>
+              <span class="text-xs font-extrabold text-amber-300">
+                @SagaOnlineStore
+              </span>
+            </div>
+          </div>
+
+          <!-- Interactive Category Jump Buttons -->
+          <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+            <button onclick="selectCategory('baby-kids')" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-amber-100 hover:text-amber-900 text-slate-700 font-bold text-xs transition flex items-center space-x-1.5">
+              <span>🧸 Baby & Kids</span>
+            </button>
+            <button onclick="selectCategory('smart-kitchen')" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-amber-100 hover:text-amber-900 text-slate-700 font-bold text-xs transition flex items-center space-x-1.5">
+              <span>🍳 Home Kitchen</span>
+            </button>
+            <button onclick="selectCategory('apparel-hoodies')" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-blue-100 hover:text-blue-900 text-slate-700 font-bold text-xs transition flex items-center space-x-1.5">
+              <span>🧥 Hoodies & T-Shirts</span>
+            </button>
+            <button onclick="selectCategory('apparel-hoodies')" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-blue-100 hover:text-blue-900 text-slate-700 font-bold text-xs transition flex items-center space-x-1.5">
+              <span>👖 Pants & Joggers</span>
+            </button>
+            <button onclick="selectCategory('car-accessories')" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 text-slate-700 font-bold text-xs transition flex items-center space-x-1.5">
+              <span>🚗 Car Accessories</span>
+            </button>
+            <button onclick="selectCategory('fitness-care')" class="px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 text-slate-700 font-bold text-xs transition flex items-center space-x-1.5">
+              <span>⚡ Fitness & Gym</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Welcome Brand Story Card -->
+        <div class="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-xl flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center space-x-2 text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">
+              <i class="fa-solid fa-award text-amber-500 text-sm"></i>
+              <span>One-Stop Family Store</span>
+            </div>
+            
+            <h3 class="text-2xl font-black text-slate-900 leading-tight mb-2">
+              Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-600">Saga Online Store</span>
+            </h3>
+
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Direct-to-consumer excellence with verified dropship central warehouse sourcing. Premium Baby & Kids nursery toys, copper kitchenware, streetwear fleece hoodies, fitness gear, and car essentials delivered seamlessly across India.
+            </p>
+
+            <!-- Welcome Story Banner Image -->
+            <div class="rounded-2xl overflow-hidden shadow-md border border-slate-100 mb-4 bg-slate-50">
+              <img 
+                src="/static/images/banners/banner_welcome_story.jpg" 
+                alt="Welcome to Saga Online Store - Best Sellers" 
+                class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500 cursor-pointer"
+                onclick="document.getElementById('productsSection').scrollIntoView({ behavior: 'smooth' })"
+              />
+            </div>
+
+            <!-- Trust Bullets -->
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="flex items-center space-x-2 p-2 bg-slate-50 rounded-xl">
+                <i class="fa-solid fa-circle-check text-emerald-600 text-sm"></i>
+                <span class="font-bold text-slate-800">Quality Verified</span>
+              </div>
+              <div class="flex items-center space-x-2 p-2 bg-slate-50 rounded-xl">
+                <i class="fa-solid fa-plane-up text-blue-600 text-sm"></i>
+                <span class="font-bold text-slate-800">Fast Air Shipping</span>
+              </div>
+              <div class="flex items-center space-x-2 p-2 bg-slate-50 rounded-xl">
+                <i class="fa-solid fa-box text-amber-600 text-sm"></i>
+                <span class="font-bold text-slate-800">Tamper-Proof Box</span>
+              </div>
+              <div class="flex items-center space-x-2 p-2 bg-slate-50 rounded-xl">
+                <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+                <span class="font-bold text-slate-800">9922163722 Support</span>
+              </div>
+            </div>
+          </div>
+
+          <button 
+            onclick="selectCategory('all')" 
+            class="w-full py-3 bg-gradient-to-r from-blue-950 to-indigo-900 hover:from-blue-900 hover:to-indigo-800 text-white font-extrabold text-xs rounded-xl shadow-md transition flex items-center justify-center space-x-2"
+          >
+            <span>Browse Full Store Catalog</span>
+            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- CATEGORIES FILTER BAR -->
   <section class="py-6 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -351,6 +542,112 @@
       <!-- Products Grid -->
       <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <!-- Rendered dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SAGA LUXURY DEPARTMENT DIRECTORY SHOWCASE -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-gradient-to-r from-amber-50 via-slate-50 to-amber-50/50 rounded-3xl p-6 sm:p-10 border border-amber-200/70 shadow-lg relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Department Overview & Quick Jump Links -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-amber-200/60 text-amber-900 text-xs font-black uppercase tracking-wider">
+              <i class="fa-solid fa-gem text-amber-700"></i>
+              <span>Official Department Directory</span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
+              Curated Collections for Modern Living
+            </h3>
+
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Every Saga department is sourced with strict quality inspection from verified dropship suppliers. Experience unbeatable margins and authentic quality.
+            </p>
+
+            <!-- Numbered Department Quick Links (Matching the banner's numbers) -->
+            <div class="space-y-2 pt-2">
+              <button 
+                onclick="selectCategory('baby-kids')"
+                class="w-full p-2.5 rounded-2xl bg-white hover:bg-amber-100/70 border border-slate-200 hover:border-amber-300 text-left transition flex items-center justify-between text-xs font-bold text-slate-800 shadow-sm group"
+              >
+                <span class="flex items-center space-x-2.5">
+                  <span class="w-6 h-6 rounded-full bg-amber-400 text-blue-950 flex items-center justify-center font-black text-[11px]">1</span>
+                  <span>Kids Toys, Nursery & Baby Care</span>
+                </span>
+                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:text-amber-800 transition text-[10px]"></i>
+              </button>
+
+              <button 
+                onclick="selectCategory('car-accessories')"
+                class="w-full p-2.5 rounded-2xl bg-white hover:bg-amber-100/70 border border-slate-200 hover:border-amber-300 text-left transition flex items-center justify-between text-xs font-bold text-slate-800 shadow-sm group"
+              >
+                <span class="flex items-center space-x-2.5">
+                  <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center font-black text-[11px]">2</span>
+                  <span>Car Mounts, Chargers & Driving Gear</span>
+                </span>
+                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:text-blue-800 transition text-[10px]"></i>
+              </button>
+
+              <button 
+                onclick="selectCategory('smart-kitchen')"
+                class="w-full p-2.5 rounded-2xl bg-white hover:bg-amber-100/70 border border-slate-200 hover:border-amber-300 text-left transition flex items-center justify-between text-xs font-bold text-slate-800 shadow-sm group"
+              >
+                <span class="flex items-center space-x-2.5">
+                  <span class="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center font-black text-[11px]">3</span>
+                  <span>Home Kitchenware, Kettles & Jars</span>
+                </span>
+                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:text-amber-800 transition text-[10px]"></i>
+              </button>
+
+              <button 
+                onclick="selectCategory('apparel-hoodies')"
+                class="w-full p-2.5 rounded-2xl bg-white hover:bg-amber-100/70 border border-slate-200 hover:border-amber-300 text-left transition flex items-center justify-between text-xs font-bold text-slate-800 shadow-sm group"
+              >
+                <span class="flex items-center space-x-2.5">
+                  <span class="w-6 h-6 rounded-full bg-slate-800 text-white flex items-center justify-center font-black text-[11px]">4</span>
+                  <span>Heavyweight Fleece Hoodies & Tees</span>
+                </span>
+                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:text-slate-900 transition text-[10px]"></i>
+              </button>
+
+              <button 
+                onclick="selectCategory('apparel-hoodies')"
+                class="w-full p-2.5 rounded-2xl bg-white hover:bg-amber-100/70 border border-slate-200 hover:border-amber-300 text-left transition flex items-center justify-between text-xs font-bold text-slate-800 shadow-sm group"
+              >
+                <span class="flex items-center space-x-2.5">
+                  <span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-black text-[11px]">5</span>
+                  <span>Relaxed Fit Cargo Joggers & Pants</span>
+                </span>
+                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:text-emerald-800 transition text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Visual Department Composition Banner -->
+          <div class="lg:col-span-7">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-white bg-white group cursor-pointer" onclick="selectCategory('all')">
+              <img 
+                src="/static/images/banners/banner_luxury_departments.jpg" 
+                alt="Saga Online Store Luxury Departments" 
+                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="p-3 bg-white/90 backdrop-blur-md flex items-center justify-between text-xs border-t border-slate-100">
+                <span class="font-extrabold text-blue-950 flex items-center">
+                  <i class="fa-solid fa-store text-amber-500 mr-1.5"></i> Saga Online Store All-In-One Showcase
+                </span>
+                <span class="text-slate-500 text-[11px] font-semibold">Tap to view full collection &rarr;</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
     </div>
@@ -830,6 +1127,105 @@
             <!-- Rendered by app.js -->
           </tbody>
         </table>
+      </div>
+
+      <!-- PRODUCT PHOTO UPLOADER & ITEM MANAGER -->
+      <div class="mt-8 pt-6 border-t border-slate-200">
+        <div class="flex items-center space-x-2.5 mb-4">
+          <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-base">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-black text-slate-900">Upload Product Images & Add Items</h4>
+            <p class="text-xs text-slate-500">Upload your remaining product photos directly from your computer without limits</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50 p-5 rounded-2xl border border-slate-200">
+          
+          <!-- Image Upload Dropzone -->
+          <div class="lg:col-span-5 space-y-3">
+            <label class="block text-xs font-bold text-slate-700">1. Select or Drop Product Photo</label>
+            <div class="border-2 border-dashed border-slate-300 hover:border-blue-600 rounded-2xl p-6 text-center bg-white cursor-pointer transition relative group">
+              <input 
+                type="file" 
+                accept="image/*" 
+                onchange="handleProductImageUpload(this)"
+                class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+              />
+              <i class="fa-solid fa-image text-3xl text-slate-400 group-hover:text-blue-600 mb-2 transition"></i>
+              <div class="text-xs font-bold text-slate-800">Click to Browse or Drag & Drop Image</div>
+              <div class="text-[11px] text-slate-400 mt-1">Supports JPG, PNG, WEBP, GIF</div>
+            </div>
+
+            <!-- Upload Status & Preview -->
+            <div id="uploadStatusBadge"></div>
+            <img id="uploadedImagePreview" class="hidden w-full h-40 object-contain rounded-xl border border-slate-200 bg-white p-2" />
+
+            <!-- Gallery of already uploaded images -->
+            <div class="pt-2">
+              <div class="text-xs font-bold text-slate-600 mb-2">Recently Uploaded Photos:</div>
+              <div id="uploadedGalleryContainer" class="grid grid-cols-4 gap-2 max-h-36 overflow-y-auto p-1"></div>
+            </div>
+          </div>
+
+          <!-- Product Details Form -->
+          <div class="lg:col-span-7">
+            <form id="newProductForm" onsubmit="submitNewProduct(event)" class="space-y-3">
+              <input type="hidden" id="newProdImageUrl" />
+              
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Product Title *</label>
+                <input id="newProdTitle" type="text" required placeholder="e.g. Vintage Rose Copper Whistling Kettle" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl bg-white focus:outline-none focus:border-blue-900" />
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Category *</label>
+                  <select id="newProdCategory" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl bg-white focus:outline-none focus:border-blue-900">
+                    <option value="baby-kids">Baby & Kids</option>
+                    <option value="smart-kitchen">Home & Kitchen</option>
+                    <option value="apparel-hoodies">Hoodies & Apparel</option>
+                    <option value="car-accessories">Car Accessories</option>
+                    <option value="fitness-care">Fitness & Gym</option>
+                    <option value="viral-gadgets">Viral Tech Gadgets</option>
+                    <option value="beauty-care">Beauty & Care</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">DeoDap Base Wholesale (₹) *</label>
+                  <input id="newProdWholesale" type="number" step="0.1" required placeholder="e.g. 199" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl bg-white focus:outline-none focus:border-blue-900" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">SAGA Selling Price (₹) *</label>
+                  <input id="newProdSelling" type="number" step="0.1" required placeholder="e.g. 549" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl bg-white focus:outline-none focus:border-blue-900" />
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">MRP Strikethrough (₹)</label>
+                  <input id="newProdMrp" type="number" step="0.1" placeholder="e.g. 1199" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl bg-white focus:outline-none focus:border-blue-900" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Description *</label>
+                <textarea id="newProdDesc" rows="2" required placeholder="Short product highlights, materials, and benefits" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-xl bg-white focus:outline-none focus:border-blue-900"></textarea>
+              </div>
+
+              <button 
+                id="submitNewProductBtn"
+                type="submit" 
+                class="w-full py-3 bg-blue-900 hover:bg-blue-800 text-white font-extrabold text-xs rounded-xl shadow-md transition flex items-center justify-center space-x-1.5"
+              >
+                <i class="fa-solid fa-plus mr-1"></i>
+                <span>Add Product to Store</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
       </div>
 
     </div>

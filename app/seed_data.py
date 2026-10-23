@@ -7,21 +7,42 @@ CATEGORIES = [
         "name": "All Products",
         "slug": "all",
         "icon": "fa-solid fa-border-all",
-        "image_url": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=300&q=80"
+        "image_url": "/static/images/banners/showcase_3d_circular_podium.jpg"
+    },
+    {
+        "id": "cat-baby-kids",
+        "name": "Baby & Kids",
+        "slug": "baby-kids",
+        "icon": "fa-solid fa-baby",
+        "image_url": "/static/images/banners/banner_baby_home_diagonal.jpg"
     },
     {
         "id": "cat-kitchen",
-        "name": "Smart Kitchen",
+        "name": "Home & Kitchen",
         "slug": "smart-kitchen",
-        "icon": "fa-solid fa-utensils",
-        "image_url": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=300&q=80"
+        "icon": "fa-solid fa-kitchen-set",
+        "image_url": "/static/images/banners/banner_3tier_essentials.jpg"
     },
     {
-        "id": "cat-home",
-        "name": "Home & Organizers",
-        "slug": "home-organizers",
-        "icon": "fa-solid fa-couch",
-        "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=300&q=80"
+        "id": "cat-apparel",
+        "name": "Hoodies & Apparel",
+        "slug": "apparel-hoodies",
+        "icon": "fa-solid fa-shirt",
+        "image_url": "/static/images/banners/banner_luxury_departments.jpg"
+    },
+    {
+        "id": "cat-car",
+        "name": "Car Accessories",
+        "slug": "car-accessories",
+        "icon": "fa-solid fa-car-side",
+        "image_url": "/static/images/banners/showcase_3d_circular_podium.jpg"
+    },
+    {
+        "id": "cat-fitness",
+        "name": "Fitness & Gym",
+        "slug": "fitness-care",
+        "icon": "fa-solid fa-dumbbell",
+        "image_url": "/static/images/banners/banner_3tier_essentials.jpg"
     },
     {
         "id": "cat-tech",
@@ -36,18 +57,295 @@ CATEGORIES = [
         "slug": "beauty-care",
         "icon": "fa-solid fa-wand-magic-sparkles",
         "image_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&q=80"
-    },
-    {
-        "id": "cat-fitness",
-        "name": "Fitness & Car Accessories",
-        "slug": "fitness-car",
-        "icon": "fa-solid fa-dumbbell",
-        "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=300&q=80"
     }
 ]
 
 PRODUCTS = [
-    # --- Smart Kitchen ---
+    # --- Baby & Kids (From Saga Uploaded Banners) ---
+    {
+        "id": "SAGA-KID-001",
+        "title": "Baby Ergonomic Silicone Suction Bowl & Spoon Feeding Set (BPA-Free)",
+        "slug": "baby-ergonomic-silicone-suction-bowl-spoon-set",
+        "category": "baby-kids",
+        "deodap_sku": "DD-KID-BOWL-SET",
+        "wholesale_price": 120.0,
+        "selling_price": 349.0,
+        "mrp": 799.0,
+        "stock": 110,
+        "rating": 4.9,
+        "review_count": 245,
+        "badge": "Mom's Choice ⭐",
+        "description": "Premium 100% food-grade platinum silicone suction bowl with matching soft-tip spoon. Features powerful non-slip suction base that sticks firmly to high chairs, preventing spills, throws, and mess during self-feeding training.",
+        "features": [
+            "100% BPA, PVC, Phthalate & Lead-Free Platinum Silicone",
+            "Super Strong Suction Base - Prevents High-Chair Spills",
+            "Gentle Soft-Tip Gum-Friendly Training Spoon",
+            "Microwave, Dishwasher, Freezer & Boil-Water Safe (-40°C to 220°C)",
+            "Ergonomic Curved Lip for Easy Food Scooping"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/banner_baby_home_diagonal.jpg",
+            "/static/images/banners/banner_3tier_essentials.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-KID-002",
+        "title": "Ultra-Soft Plush Elephant Baby Cuddle Pillow & Sleep Companion",
+        "slug": "ultra-soft-plush-elephant-baby-cuddle-pillow",
+        "category": "baby-kids",
+        "deodap_sku": "DD-KID-ELEPH-PLSH",
+        "wholesale_price": 140.0,
+        "selling_price": 399.0,
+        "mrp": 899.0,
+        "stock": 85,
+        "rating": 4.8,
+        "review_count": 310,
+        "badge": "Top Gift Pick 🎁",
+        "description": "Incredibly huggable, velvety-soft plush elephant companion. Stuffed with hypoallergenic PP cotton for calming, comforting sleep. Perfect decorative addition for baby nursery and toddler playtime.",
+        "features": [
+            "Hypoallergenic Ultra-Soft Velveteen Fabric",
+            "Embroidered Safe Baby Eyes - Zero Choking Hazard",
+            "Machine Washable on Gentle Cycle",
+            "Calming Hug Pillow for Peaceful Sleep",
+            "Dimensions: 30cm - Ideal for Tiny Arms to Hug"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1559454403-b8fb88521f11?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/banner_baby_home_diagonal.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-KID-003",
+        "title": "Montessori Educational Wooden Alphabet & Building Blocks Puzzle",
+        "slug": "montessori-educational-wooden-building-blocks",
+        "category": "baby-kids",
+        "deodap_sku": "DD-KID-WOOD-BLKS",
+        "wholesale_price": 160.0,
+        "selling_price": 449.0,
+        "mrp": 999.0,
+        "stock": 70,
+        "rating": 4.7,
+        "review_count": 180,
+        "badge": "Brain Booster 🧠",
+        "description": "Inspire creative thinking, spatial awareness, and motor coordination with this smooth natural hardwood block puzzle set. Coated with non-toxic, child-safe organic water-based paints.",
+        "features": [
+            "Handcrafted Natural Beech Wood with Rounded Safe Edges",
+            "Eco-Friendly Non-Toxic Water-Based Paints",
+            "Develops Fine Motor Skills & Color Recognition",
+            "Includes Wooden Storage Tray with Pattern Guide",
+            "Ideal for Ages 1 to 5 Years Old"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/banner_welcome_story.jpg"
+        ],
+        "is_trending": 0
+    },
+
+    # --- Home & Kitchen (From Saga Uploaded Banners) ---
+    {
+        "id": "SAGA-HOM-007",
+        "title": "Vintage Rose Copper Whistling Stove-Top Tea Kettle (2.5L)",
+        "slug": "vintage-rose-copper-whistling-tea-kettle-2-5l",
+        "category": "smart-kitchen",
+        "deodap_sku": "DD-KTC-COPP-KTL",
+        "wholesale_price": 380.0,
+        "selling_price": 899.0,
+        "mrp": 1999.0,
+        "stock": 45,
+        "rating": 4.9,
+        "review_count": 275,
+        "badge": "Luxury Home 🌟",
+        "description": "Stunning metallic rose-copper finish whistling kettle that elevates your kitchen countertop. Made of food-grade 304 stainless steel with encapsulated 5-layer thermal base for lightning-fast, even water boiling. Loud melodic whistle alerts you when ready.",
+        "features": [
+            "Food-Grade 304 Stainless Steel with Rose Copper Mirror Finish",
+            "Capsulated Thermal Induction Base - Boils Water in Minutes",
+            "Ergonomic Heat-Resistant Stay-Cool Wood-Grain Handle",
+            "Audible Whistle Automatically Alerts When Water Reaches Boil",
+            "Compatible with Induction, Gas, Electric & Ceramic Cooktops"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1544233726-9f1d2b27be8b?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/banner_3tier_essentials.jpg",
+            "/static/images/banners/banner_baby_home_diagonal.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-HOM-008",
+        "title": "Airtight Matte Black Kitchen Canister Tins with Bamboo Lids (Set of 3)",
+        "slug": "airtight-matte-black-kitchen-canister-tins",
+        "category": "smart-kitchen",
+        "deodap_sku": "DD-KTC-CAN-3SET",
+        "wholesale_price": 220.0,
+        "selling_price": 599.0,
+        "mrp": 1299.0,
+        "stock": 60,
+        "rating": 4.8,
+        "review_count": 195,
+        "badge": "Kitchen Organizer",
+        "description": "Minimalist Scandinavian design tea, coffee, and sugar storage containers. Durable carbon steel construction with natural airtight silicone-sealed bamboo lids to keep pantry essentials fresh, dry, and moisture-free.",
+        "features": [
+            "Airtight Food-Grade Silicone Seal Keeps Moisture Out",
+            "Natural Eco Bamboo Lids with Matte Powder-Coated Metal",
+            "Rust-Proof, Dent-Resistant & Easy Wipe Clean",
+            "Set of 3 Matching Canisters for Tea, Coffee, Sugar & Spices",
+            "Modern Farmhouse Aesthetic for Countertop Display"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/banner_3tier_essentials.jpg"
+        ],
+        "is_trending": 0
+    },
+
+    # --- Hoodies & Apparel (From Saga Uploaded Banners) ---
+    {
+        "id": "SAGA-APP-001",
+        "title": "Premium Heavyweight Oversized Unisex Fleece Hoodie (Charcoal Heather)",
+        "slug": "premium-heavyweight-oversized-unisex-fleece-hoodie",
+        "category": "apparel-hoodies",
+        "deodap_sku": "DD-APP-HOOD-OVR",
+        "wholesale_price": 399.0,
+        "selling_price": 899.0,
+        "mrp": 1999.0,
+        "stock": 75,
+        "rating": 4.8,
+        "review_count": 420,
+        "badge": "Streetwear Hot 🔥",
+        "description": "Crafted from 380 GSM ultra-dense combed cotton-poly fleece. Features double-layered hood with metallic eyelets, drop-shoulder oversized aesthetic, spacious kangaroo pouch pocket, and ribbed cuffs that maintain their shape wash after wash.",
+        "features": [
+            "380 GSM Heavyweight Brushed Cotton Interior",
+            "Oversized Drop-Shoulder Relaxed Streetwear Fit",
+            "Double-Layered Hood with Premium Drawstrings",
+            "Pre-Shrunk Bio-Washed Fabric - Zero Color Bleeding",
+            "Kangaroo Pocket with Reinforced Stitching"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/showcase_3d_circular_podium.jpg",
+            "/static/images/banners/banner_luxury_departments.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-APP-002",
+        "title": "Relaxed Fit Cotton Cargo Jogger Pants with Drawstring (Khaki & Olive)",
+        "slug": "relaxed-fit-cotton-cargo-jogger-pants",
+        "category": "apparel-hoodies",
+        "deodap_sku": "DD-APP-CRGO-PNT",
+        "wholesale_price": 340.0,
+        "selling_price": 799.0,
+        "mrp": 1699.0,
+        "stock": 65,
+        "rating": 4.7,
+        "review_count": 280,
+        "badge": "Everyday Comfort",
+        "description": "Versatile all-day wear cargo trousers tailored with 98% breathable cotton twill and 2% elastane for maximum stretch and mobility. Features 6 deep functional pockets, elastic waistband, and tapered ankle cuffs.",
+        "features": [
+            "98% Breathable Cotton Twill + 2% Spandex Stretch",
+            "6 Deep Utility Pockets Including Side Snap Flaps",
+            "Elastic Drawstring Waistband for Custom Fit",
+            "Reinforced Knee Seams for Maximum Durability",
+            "Tapered Ankle Rib Cuffs - Pairs Perfectly with Sneakers"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/showcase_3d_circular_podium.jpg"
+        ],
+        "is_trending": 1
+    },
+
+    # --- Car Accessories (From Saga Uploaded Banners) ---
+    {
+        "id": "SAGA-CAR-001",
+        "title": "360° Magnetic Rotatable Car Air Vent Phone Mount Holder",
+        "slug": "360-magnetic-rotatable-car-air-vent-mount",
+        "category": "car-accessories",
+        "deodap_sku": "DD-CAR-MAGN-MNT",
+        "wholesale_price": 95.0,
+        "selling_price": 299.0,
+        "mrp": 699.0,
+        "stock": 130,
+        "rating": 4.8,
+        "review_count": 360,
+        "badge": "Driver Essential 🚗",
+        "description": "Equipped with 6 ultra-strong N52 neodymium magnets that securely hold any smartphone even over bumpy speed breakers and sharp turns. Silicone-cushioned steel hook twist-locks firmly onto all AC vent blades without scratching.",
+        "features": [
+            "6 Strong N52 Neodymium Magnets - Holds Up to 2.5kg",
+            "Upgraded Twist-Lock Vent Hook - Zero Sagging or Falling",
+            "Full 360° Swivel Ball Joint for Landscape GPS & Portrait Calls",
+            "One-Hand Instant Magnetic Snap and Release",
+            "Compatible with iPhone MagSafe & All Android Devices"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/showcase_3d_circular_podium.jpg",
+            "/static/images/banners/banner_luxury_departments.jpg"
+        ],
+        "is_trending": 1
+    },
+
+    # --- Fitness & Gym (From Saga Uploaded Banners) ---
+    {
+        "id": "SAGA-FIT-005",
+        "title": "Eco-Friendly Non-Slip Dual Texture Yoga & Workout Mat (6mm)",
+        "slug": "eco-friendly-non-slip-yoga-workout-mat-6mm",
+        "category": "fitness-care",
+        "deodap_sku": "DD-FIT-YOGA-6MM",
+        "wholesale_price": 260.0,
+        "selling_price": 699.0,
+        "mrp": 1499.0,
+        "stock": 70,
+        "rating": 4.8,
+        "review_count": 290,
+        "badge": "Gym & Yoga 🧘",
+        "description": "High-density TPE dual-layer exercise mat with laser-engraved posture alignment lines. 6mm thick cushioning protects knees, wrists, and spine during intense yoga, pilates, and floor workouts.",
+        "features": [
+            "Laser-Etched Body Alignment System Guides Perfect Poses",
+            "Dual-Side Non-Slip Texture Grips Wood, Tile & Marble Floors",
+            "High-Density 6mm TPE Foam Absorbs Joint Impact",
+            "100% Non-Toxic, Odor-Free & Sweat-Resistant",
+            "Includes Free Carrying Strap & Breathable Mesh Bag"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/banner_3tier_essentials.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-FIT-006",
+        "title": "Insulated Stainless Steel Gym Protein Shaker Bottle (750ml)",
+        "slug": "insulated-stainless-steel-gym-protein-shaker-750ml",
+        "category": "fitness-care",
+        "deodap_sku": "DD-FIT-SHKR-750",
+        "wholesale_price": 180.0,
+        "selling_price": 479.0,
+        "mrp": 999.0,
+        "stock": 90,
+        "rating": 4.7,
+        "review_count": 210,
+        "badge": "Lump-Free Mix ⚡",
+        "description": "Never smell foul plastic shaker odor again. Made of premium food-grade 304 stainless steel with built-in silent blending whisk. Keeps protein shakes chilled for 24 hours without condensation.",
+        "features": [
+            "Food-Grade 304 Stainless Steel - 100% Odor Resistant",
+            "Double-Wall Vacuum Insulation Keeps Cold for 24 Hours",
+            "Leak-Proof Flip Cap with Protective Spout Cover",
+            "Built-in Surgical Stainless Whisk for Smooth Shakes",
+            "Embossed Measurement Markings (ml & oz) Inside"
+        ],
+        "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=80",
+        "gallery": [
+            "/static/images/banners/banner_3tier_essentials.jpg"
+        ],
+        "is_trending": 0
+    },
+
+    # --- Smart Kitchen Original DeoDap Catalog ---
     {
         "id": "SAGA-KTC-001",
         "title": "Electric USB Mini Vegetable & Garlic Chopper (250ml)",
@@ -71,8 +369,7 @@ PRODUCTS = [
         ],
         "image_url": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80",
         "gallery": [
-            "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80",
-            "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+            "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80"
         ],
         "is_trending": 1
     },
@@ -131,33 +428,6 @@ PRODUCTS = [
         "is_trending": 0
     },
     {
-        "id": "SAGA-KTC-004",
-        "title": "6-Piece Reusable Stretch Silicone Food Storage Bowl Lids",
-        "slug": "6-piece-reusable-stretch-silicone-food-lids",
-        "category": "smart-kitchen",
-        "deodap_sku": "DD-KTC-LIDS-6PC",
-        "wholesale_price": 49.0,
-        "selling_price": 189.0,
-        "mrp": 399.0,
-        "stock": 150,
-        "rating": 4.5,
-        "review_count": 112,
-        "badge": "Eco-Friendly",
-        "description": "Never struggle with plastic cling wrap again. These 6 flexible silicone stretch lids form an airtight, leak-proof seal over bowls, containers, pots, watermelons, and cups. Microwave, freezer, and dishwasher safe.",
-        "features": [
-            "6 Varied Sizes (6.5cm to 21cm) Fits Any Bowl or Fruit",
-            "100% Airtight & Leak-Proof Seal Prevents Odor",
-            "BPA-Free Food-Grade Platinum Silicone",
-            "Temperature Resistant from -40°C to 230°C",
-            "Reusable for Years, Zero Plastic Waste"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80"
-        ],
-        "is_trending": 0
-    },
-    {
         "id": "SAGA-KTC-005",
         "title": "9-in-1 Multifunction Vegetable Chopper, Slicer & Drain Basket",
         "slug": "9-in-1-multifunction-vegetable-chopper-slicer-drain",
@@ -184,172 +454,8 @@ PRODUCTS = [
         ],
         "is_trending": 1
     },
-    {
-        "id": "SAGA-KTC-006",
-        "title": "Portable Mini Bag Heat Sealer with Hidden Cutter",
-        "slug": "portable-mini-bag-heat-sealer-hidden-cutter",
-        "category": "smart-kitchen",
-        "deodap_sku": "DD-KTC-SEAL-MINI",
-        "wholesale_price": 55.0,
-        "selling_price": 199.0,
-        "mrp": 449.0,
-        "stock": 95,
-        "rating": 4.4,
-        "review_count": 98,
-        "badge": "Snack Saver",
-        "description": "Pocket-sized 2-in-1 sealing machine that locks freshness in chip bags, snack packets, pulses, and dry fruits. Equipped with magnetic bottom for easy storage on the refrigerator door.",
-        "features": [
-            "Fast 3-Second Heating for Instant Airtight Seal",
-            "Built-in Hidden Sharp Blade for Easy Bag Opening",
-            "Magnetic Base to Stick Right on Fridge",
-            "Keeps Chips & Snacks Crispy for Weeks",
-            "Battery Operated, Lightweight & Portable"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&q=80"
-        ],
-        "is_trending": 0
-    },
 
-    # --- Home & Organizers ---
-    {
-        "id": "SAGA-HOM-001",
-        "title": "Astronaut Galaxy Starry Sky Projector with 360° Remote & Timer",
-        "slug": "astronaut-galaxy-starry-sky-projector-remote",
-        "category": "home-organizers",
-        "deodap_sku": "DD-HOM-ASTRO-LED",
-        "wholesale_price": 449.0,
-        "selling_price": 1199.0,
-        "mrp": 2499.0,
-        "stock": 35,
-        "rating": 4.9,
-        "review_count": 530,
-        "badge": "Viral Sensation ⭐",
-        "description": "Transform any bedroom into a magical universe. Features a magnetic 360° rotating astronaut head that projects ultra-vivid nebula clouds and twinkling stars onto walls and ceilings. Includes wireless remote control, brightness adjustment, and auto-off sleep timer.",
-        "features": [
-            "High-Definition 8 Nebula Modes & Twinkling Green Stars",
-            "360° Magnetic Head Rotation with Adjustable Angle",
-            "Smart Wireless Remote Control (Range up to 5m)",
-            "Automatic Sleep Timer (45 / 90 Minutes)",
-            "Perfect Mood Lighting for Bedrooms, Gaming & Parties"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&q=80"
-        ],
-        "is_trending": 1
-    },
-    {
-        "id": "SAGA-HOM-002",
-        "title": "Wireless USB Rechargeable LED Motion Sensor Light (Pack of 2)",
-        "slug": "wireless-usb-rechargeable-led-motion-sensor-light",
-        "category": "home-organizers",
-        "deodap_sku": "DD-HOM-MOTN-LGT2",
-        "wholesale_price": 125.0,
-        "selling_price": 379.0,
-        "mrp": 799.0,
-        "stock": 70,
-        "rating": 4.7,
-        "review_count": 280,
-        "badge": "Smart Living",
-        "description": "Hands-free smart illumination for wardrobes, staircases, kitchen cabinets, and dark corridors. Detects human motion within 3-5 meters and turns off automatically after 20 seconds. Built-in strong magnet installs anywhere with included 3M adhesive plates.",
-        "features": [
-            "PIR Motion Sensor + Day/Night Light Sensor",
-            "Warm White / Cool White Gentle Eye-Care Illumination",
-            "Magnetic Stick-on Base - No Wiring or Tools Needed",
-            "USB Rechargeable Lithium Battery (Up to 60 Days on Auto)",
-            "Sleek Ultra-Thin Body Design"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80"
-        ],
-        "is_trending": 1
-    },
-    {
-        "id": "SAGA-HOM-003",
-        "title": "9-Hole Space-Saving Magic Foldable Clothes Hanger (Pack of 3)",
-        "slug": "9-hole-space-saving-magic-foldable-clothes-hanger",
-        "category": "home-organizers",
-        "deodap_sku": "DD-HOM-HNGR-3PC",
-        "wholesale_price": 79.0,
-        "selling_price": 249.0,
-        "mrp": 549.0,
-        "stock": 110,
-        "rating": 4.6,
-        "review_count": 164,
-        "badge": "Wardrobe Must",
-        "description": "Multiply your wardrobe closet space by 4X. Each hanger features 9 slots and a 360° rotating hook that can be used horizontally or vertically to store shirts, dresses, suits, and coats without creasing.",
-        "features": [
-            "Saves 80% Closet Space When Used Vertically",
-            "Heavy-Duty Reinforced PP Plastic Holds up to 10kg",
-            "360° Swivel Hook with Anti-Drop Smooth Edge",
-            "Pack of 3 Multicolored Organizers",
-            "Organize Clothes by Season, Color, or Type"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&q=80"
-        ],
-        "is_trending": 0
-    },
-    {
-        "id": "SAGA-HOM-004",
-        "title": "Self-Adhesive Rustproof Bathroom Corner Triangle Shelf (Pack of 2)",
-        "slug": "self-adhesive-rustproof-bathroom-corner-triangle-shelf",
-        "category": "home-organizers",
-        "deodap_sku": "DD-HOM-BATH-CRNR",
-        "wholesale_price": 95.0,
-        "selling_price": 299.0,
-        "mrp": 699.0,
-        "stock": 88,
-        "rating": 4.8,
-        "review_count": 310,
-        "badge": "No Drill Needed",
-        "description": "Maximize 90-degree corner spaces in bathrooms and kitchens. Strong trace-less magic adhesive strips provide up to 5kg load capacity without damaging tiles or drilling holes. Drainage grid prevents stagnant water.",
-        "features": [
-            "Strong Adhesive Hooks - No Drilling, No Nails, No Holes",
-            "Corrosion-Resistant Powder Coated Stainless Metal",
-            "Rapid Water Drainage Hollow Grid Design",
-            "Holds Shampoo Bottles, Body Wash, Oils & Soaps",
-            "Works on Ceramic Tiles, Glass, Granite & Polished Marble"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80"
-        ],
-        "is_trending": 0
-    },
-    {
-        "id": "SAGA-HOM-005",
-        "title": "360° Spin Floor Cleaning Microfiber Magic Mop with Dual Bucket",
-        "slug": "360-spin-floor-cleaning-microfiber-magic-mop",
-        "category": "home-organizers",
-        "deodap_sku": "DD-HOM-MOP-360",
-        "wholesale_price": 220.0,
-        "selling_price": 599.0,
-        "mrp": 1299.0,
-        "stock": 28,
-        "rating": 4.7,
-        "review_count": 195,
-        "badge": "Deep Clean",
-        "description": "Effortless cleaning with hands-free spin wringing system. Super-absorbent microfiber strands trap fine dust, hair, and stubborn liquid stains on all types of floorings including marble, wood, and tiles.",
-        "features": [
-            "Stainless Steel Rapid Spin Dryer Basket",
-            "Thick Microfiber Pad Traps 3X More Dust & Dirt",
-            "Extendable 360° Flexible Stainless Steel Handle",
-            "Includes 2 Washable Reusable Microfiber Mop Heads",
-            "Built-in Water Drain Plug for Mess-Free Emptying"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80"
-        ],
-        "is_trending": 0
-    },
-
-    # --- Viral Gadgets & Tech ---
+    # --- Viral Tech Gadgets ---
     {
         "id": "SAGA-TEC-001",
         "title": "4-in-1 Fast Wireless Charger with RGB Ambient Lamp & Bluetooth Speaker",
@@ -404,59 +510,34 @@ PRODUCTS = [
         ],
         "is_trending": 1
     },
+
+    # --- Home & Projector ---
     {
-        "id": "SAGA-TEC-003",
-        "title": "10-Inch LED Selfie Ring Light with 7ft Heavy Tripod & Phone Mount",
-        "slug": "10-inch-led-selfie-ring-light-tripod-phone-mount",
+        "id": "SAGA-HOM-001",
+        "title": "Astronaut Galaxy Starry Sky Projector with 360° Remote & Timer",
+        "slug": "astronaut-galaxy-starry-sky-projector-remote",
         "category": "viral-gadgets",
-        "deodap_sku": "DD-TEC-RING-10IN",
-        "wholesale_price": 210.0,
-        "selling_price": 549.0,
-        "mrp": 1199.0,
-        "stock": 65,
-        "rating": 4.6,
-        "review_count": 380,
-        "badge": "Creator Essential",
-        "description": "Professional studio lighting designed for YouTube videos, Instagram Reels, Zoom calls, makeup tutorials, and photography. Features 3 color temperatures (Warm, Natural, Cool White) with 10 dimmable brightness levels and full 360° pan-tilt.",
+        "deodap_sku": "DD-HOM-ASTRO-LED",
+        "wholesale_price": 449.0,
+        "selling_price": 1199.0,
+        "mrp": 2499.0,
+        "stock": 35,
+        "rating": 4.9,
+        "review_count": 530,
+        "badge": "Viral Sensation ⭐",
+        "description": "Transform any bedroom into a magical universe. Features a magnetic 360° rotating astronaut head that projects ultra-vivid nebula clouds and twinkling stars onto walls and ceilings. Includes wireless remote control, brightness adjustment, and auto-off sleep timer.",
         "features": [
-            "3 Color Modes (3000K - 6500K) & 10 Brightness Levels",
-            "Heavy-Duty Adjustable 7-Foot Metal Tripod Stand",
-            "360° Universal Rotatable Smartphone Holder",
-            "USB-Powered - Works with Powerbanks, Laptops & Adapters",
-            "Includes In-Line Remote Controller"
+            "High-Definition 8 Nebula Modes & Twinkling Green Stars",
+            "360° Magnetic Head Rotation with Adjustable Angle",
+            "Smart Wireless Remote Control (Range up to 5m)",
+            "Automatic Sleep Timer (45 / 90 Minutes)",
+            "Perfect Mood Lighting for Bedrooms, Gaming & Parties"
         ],
-        "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&q=80",
+        "image_url": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&q=80",
         "gallery": [
-            "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&q=80"
+            "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&q=80"
         ],
-        "is_trending": 0
-    },
-    {
-        "id": "SAGA-TEC-004",
-        "title": "Portable Hands-Free Bladeless Hanging Neck Fan (USB Rechargeable)",
-        "slug": "portable-hands-free-bladeless-hanging-neck-fan",
-        "category": "viral-gadgets",
-        "deodap_sku": "DD-TEC-NECK-FAN",
-        "wholesale_price": 199.0,
-        "selling_price": 549.0,
-        "mrp": 1199.0,
-        "stock": 74,
-        "rating": 4.6,
-        "review_count": 190,
-        "badge": "Beat The Heat",
-        "description": "Enjoy a continuous 360° cool breeze around your neck without tangled hair or loud noise. Lightweight headphone-styled design with twin turbine motors and 3 adjustable speed modes.",
-        "features": [
-            "Safe Bladeless Design - Won't Pinch or Twist Hair",
-            "Twin Turbines with 78 Surround Air Outlets",
-            "3 Speed Wind Settings (Soft, Medium, Cyclone)",
-            "Ultra-Quiet Brushless Motor (<25dB Sound)",
-            "2400mAh Battery Runs 4-8 Hours on Single USB Charge"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80"
-        ],
-        "is_trending": 0
+        "is_trending": 1
     },
 
     # --- Beauty & Personal Care ---
@@ -486,143 +567,6 @@ PRODUCTS = [
             "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80"
         ],
         "is_trending": 1
-    },
-    {
-        "id": "SAGA-BEA-002",
-        "title": "540 Micro-Needles 0.5mm Titanium Derma Roller for Hair & Beard Growth",
-        "slug": "540-micro-needles-titanium-derma-roller-hair-beard",
-        "category": "beauty-care",
-        "deodap_sku": "DD-BEA-DERM-540",
-        "wholesale_price": 75.0,
-        "selling_price": 249.0,
-        "mrp": 599.0,
-        "stock": 85,
-        "rating": 4.7,
-        "review_count": 230,
-        "badge": "Beard & Hair Growth",
-        "description": "Clinical grade 0.5mm micro-needling roller designed to stimulate dormant hair follicles, boost collagen synthesis, and maximize the absorption of minoxidil, rosemary oil, and beard growth serums.",
-        "features": [
-            "540 Ultra-Sharp Medical Grade Titanium Needles (0.5mm)",
-            "Stimulates Natural Collagen & Blood Circulation",
-            "Proven to Fill Beard Patches and Scalp Thinning",
-            "Ergonomic Anti-Slip Grip Handle",
-            "Includes Clear Protective Storage Case"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80"
-        ],
-        "is_trending": 0
-    },
-    {
-        "id": "SAGA-BEA-003",
-        "title": "Electric Flawless Eyebrow & Precision Facial Hair Trimmer",
-        "slug": "electric-flawless-eyebrow-facial-hair-trimmer",
-        "category": "beauty-care",
-        "deodap_sku": "DD-BEA-EYEB-TRIM",
-        "wholesale_price": 110.0,
-        "selling_price": 329.0,
-        "mrp": 699.0,
-        "stock": 92,
-        "rating": 4.6,
-        "review_count": 310,
-        "badge": "Painless Beauty",
-        "description": "Say goodbye to painful waxing, threading, and plucking. 18K gold-plated precision micro-blade gently erases unwanted hair from eyebrows, upper lip, chin, and peach fuzz instantly without redness or irritation.",
-        "features": [
-            "18K Hypoallergenic Gold-Plated Precision Head",
-            "Built-in Bright LED Light to Catch Every Fine Hair",
-            "100% Painless - Safe for Sensitive Skin Daily Use",
-            "Compact Lipstick-Sized Design for Handbag Portability",
-            "USB Rechargeable - No Need to Buy AA Batteries"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80"
-        ],
-        "is_trending": 1
-    },
-
-    # --- Fitness & Car Accessories ---
-    {
-        "id": "SAGA-FIT-001",
-        "title": "9-in-1 Color-Coded Foldable Push-Up Board System",
-        "slug": "9-in-1-color-coded-foldable-push-up-board",
-        "category": "fitness-car",
-        "deodap_sku": "DD-FIT-PUSH-9IN1",
-        "wholesale_price": 199.0,
-        "selling_price": 549.0,
-        "mrp": 1199.0,
-        "stock": 58,
-        "rating": 4.8,
-        "review_count": 410,
-        "badge": "Home Gym King 💪",
-        "description": "Scientifically targets specific upper-body muscle groups through color-coded positions: Blue for Chest, Red for Shoulders, Yellow for Back, and Green for Triceps. Heavy-duty folding design with non-slip handles and floor pads.",
-        "features": [
-            "Color-Coded Positions Target 4 Major Muscle Groups",
-            "Heavy-Duty ABS Engineering Plastic Holds up to 150kg",
-            "Foldable Compact Design with Locking Mechanism",
-            "Premium Silicone Padded Non-Slip Hand Grips",
-            "Perfect for Home Workout, Calisthenics & Travel"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=80"
-        ],
-        "is_trending": 1
-    },
-    {
-        "id": "SAGA-FIT-002",
-        "title": "Smart LED Temperature Display Insulated Stainless Steel Flask (500ml)",
-        "slug": "smart-led-temperature-display-insulated-flask",
-        "category": "fitness-car",
-        "deodap_sku": "DD-FIT-TEMP-FLSK",
-        "wholesale_price": 135.0,
-        "selling_price": 399.0,
-        "mrp": 899.0,
-        "stock": 95,
-        "rating": 4.7,
-        "review_count": 340,
-        "badge": "Top Rated",
-        "description": "Double-wall vacuum insulated smart water bottle featuring an ultra-sensitive touch LCD temperature display on the lid. Keeps tea, coffee, and soup hot for 12 hours, or iced water chilled for 24 hours.",
-        "features": [
-            "High-Definition Touch LCD Screen Shows Live Water Temperature",
-            "Double-Wall Vacuum Insulation (12h Hot / 24h Cold)",
-            "Food-Grade 304 Stainless Steel Interior (Rust & Odor Proof)",
-            "Includes Removable Stainless Steel Tea Infuser Strainer",
-            "Leak-Proof Silicone Gasket Cap"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80"
-        ],
-        "is_trending": 0
-    },
-    {
-        "id": "SAGA-FIT-003",
-        "title": "High-Pressure Adjustable Jet Water Spray Gun for Car Washing & Gardening",
-        "slug": "high-pressure-adjustable-jet-water-spray-gun",
-        "category": "fitness-car",
-        "deodap_sku": "DD-CAR-WTR-GUN",
-        "wholesale_price": 175.0,
-        "selling_price": 489.0,
-        "mrp": 999.0,
-        "stock": 60,
-        "rating": 4.6,
-        "review_count": 225,
-        "badge": "Car Wash Pro",
-        "description": "Commercial-style heavy solid brass nozzle pressure sprayer. Easily switches between pinpoint direct jet, wide shower, fan spray, and misting. Ideal for blasting car mud, patio moss, and delicate plant watering.",
-        "features": [
-            "Solid Brass High-Pressure Jet Nozzle",
-            "Ergonomic Trigger Handle with Hands-Free Locking Clip",
-            "Universal Quick-Connect Hose Fitting Included",
-            "Leak-Proof Rubber O-Rings Withstands High Water Pressure",
-            "Multi-Pattern Spray: Jet, Mist, Shower, Cone, Fan"
-        ],
-        "image_url": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=600&q=80",
-        "gallery": [
-            "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=600&q=80"
-        ],
-        "is_trending": 0
     }
 ]
 
@@ -647,60 +591,6 @@ COUPONS = [
         "value": 49.0,
         "min_order_value": 499.0,
         "is_active": 1
-    }
-]
-
-SAMPLE_ORDERS = [
-    {
-        "id": "SAGA-89214",
-        "customer_name": "Rohan Deshmukh",
-        "customer_phone": "9823012456",
-        "customer_email": "rohan.d@gmail.com",
-        "address": "Flat 402, Shiv Shanti Residency, FC Road",
-        "city": "Pune",
-        "state": "Maharashtra",
-        "pincode": "411004",
-        "payment_method": "Cash on Delivery",
-        "payment_status": "Pending",
-        "subtotal": 1498.0,
-        "discount": 100.0,
-        "shipping_fee": 0.0,
-        "total_amount": 1398.0,
-        "total_wholesale_cost": 599.0,
-        "total_margin": 799.0,
-        "status": "In Transit",
-        "items": [
-            {"id": "SAGA-KTC-001", "title": "Electric USB Mini Vegetable & Garlic Chopper (250ml)", "price": 349.0, "wholesale_price": 119.0, "quantity": 1, "deodap_sku": "DD-KTC-CHOP-250"},
-            {"id": "SAGA-HOM-001", "title": "Astronaut Galaxy Starry Sky Projector with 360° Remote & Timer", "price": 1199.0, "wholesale_price": 449.0, "quantity": 1, "deodap_sku": "DD-HOM-ASTRO-LED"}
-        ],
-        "created_at": "2026-10-23 11:20:00",
-        "deodap_sync_status": "Synced to DeoDap",
-        "tracking_number": "DEL-EXP-99214456"
-    },
-    {
-        "id": "SAGA-89190",
-        "customer_name": "Pooja Sharma",
-        "customer_phone": "9167234567",
-        "customer_email": "pooja.sharma@yahoo.com",
-        "address": "B-12, Green Park Extension, Near Metro Gate 2",
-        "city": "New Delhi",
-        "state": "Delhi",
-        "pincode": "110016",
-        "payment_method": "UPI Online",
-        "payment_status": "Paid",
-        "subtotal": 549.0,
-        "discount": 50.0,
-        "shipping_fee": 0.0,
-        "total_amount": 499.0,
-        "total_wholesale_cost": 199.0,
-        "total_margin": 300.0,
-        "status": "Delivered",
-        "items": [
-            {"id": "SAGA-FIT-001", "title": "9-in-1 Color-Coded Foldable Push-Up Board System", "price": 549.0, "wholesale_price": 199.0, "quantity": 1, "deodap_sku": "DD-FIT-PUSH-9IN1"}
-        ],
-        "created_at": "2026-10-22 14:10:00",
-        "deodap_sync_status": "Delivered by DeoDap",
-        "tracking_number": "BLR-DTP-88712344"
     }
 ]
 
@@ -741,29 +631,9 @@ def seed_database():
             (cp["code"], cp["discount_type"], cp["value"], cp["min_order_value"], cp["is_active"])
         )
 
-    # Seed sample orders if empty
-    cursor.execute("SELECT COUNT(*) FROM orders")
-    if cursor.fetchone()[0] == 0:
-        for ord in SAMPLE_ORDERS:
-            cursor.execute("""
-            INSERT INTO orders (
-                id, customer_name, customer_phone, customer_email, address, city, state,
-                pincode, payment_method, payment_status, subtotal, discount, shipping_fee,
-                total_amount, total_wholesale_cost, total_margin, status, items_json,
-                created_at, deodap_sync_status, tracking_number
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                ord["id"], ord["customer_name"], ord["customer_phone"], ord["customer_email"],
-                ord["address"], ord["city"], ord["state"], ord["pincode"], ord["payment_method"],
-                ord["payment_status"], ord["subtotal"], ord["discount"], ord["shipping_fee"],
-                ord["total_amount"], ord["total_wholesale_cost"], ord["total_margin"],
-                ord["status"], json.dumps(ord["items"]), ord["created_at"],
-                ord["deodap_sync_status"], ord["tracking_number"]
-            ))
-
     conn.commit()
     conn.close()
-    print("Database seeded successfully with realistic DeoDap products and SAGA margins!")
+    print("Database seeded successfully with Saga brand products & categories!")
 
 if __name__ == "__main__":
     from .database import init_db

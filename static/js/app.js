@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchCategories();
   fetchProducts();
   updateCartBadge();
+  initHeroCarousel();
 });
 
 // Storage helpers
@@ -1151,6 +1152,7 @@ async function openAdminDashboardModal() {
   document.getElementById("adminModal").classList.remove("hidden");
   document.body.classList.add("overflow-hidden");
   loadAdminData();
+  loadUploadedImagesGallery();
 }
 
 function closeAdminDashboardModal() {
@@ -1260,3 +1262,219 @@ function escapeHtml(text) {
 function toggleWishlist(id) {
   showToast("Added to your wishlist!");
 }
+
+// ================= HERO CAROUSEL LOGIC =================
+let heroCurrentSlide = 0;
+let heroTimer = null;
+
+function initHeroCarousel() {
+  const slides = document.querySelectorAll(".hero-carousel-slide");
+  if (!slides || slides.length === 0) return;
+
+  if (heroTimer) clearInterval(heroTimer);
+  heroTimer = setInterval(() => {
+    nextHeroSlide();
+  }, 4500);
+}
+
+function updateHeroCarouselUI() {
+  const slides = document.querySelectorAll(".hero-carousel-slide");
+  const dots = document.querySelectorAll(".carousel-dot");
+  if (!slides || slides.length === 0) return;
+
+  slides.forEach((slide, idx) => {
+    if (idx === heroCurrentSlide) {
+      slide.classList.remove("opacity-0", "pointer-events-none");
+      slide.classList.add("opacity-100");
+    } else {
+      slide.classList.remove("opacity-100");
+      slide.classList.add("opacity-0", "pointer-events-none");
+    }
+  });
+
+  dots.forEach((dot, idx) => {
+    if (idx === heroCurrentSlide) {
+      dot.className = "carousel-dot w-4 h-2 rounded-full bg-amber-400 transition-all cursor-pointer";
+    } else {
+      dot.className = "carousel-dot w-2 h-2 rounded-full bg-white/40 transition-all cursor-pointer";
+    }
+  });
+}
+
+function nextHeroSlide(e) {
+  if (e) e.stopPropagation();
+  const slides = document.querySelectorAll(".hero-carousel-slide");
+  if (!slides || slides.length === 0) return;
+  heroCurrentSlide = (heroCurrentSlide + 1) % slides.length;
+  updateHeroCarouselUI();
+}
+
+function prevHeroSlide(e) {
+  if (e) e.stopPropagation();
+  const slides = document.querySelectorAll(".hero-carousel-slide");
+  if (!slides || slides.length === 0) return;
+  heroCurrentSlide = (heroCurrentSlide - 1 + slides.length) % slides.length;
+  updateHeroCarouselUI();
+}
+
+function setHeroSlide(idx) {
+  heroCurrentSlide = idx;
+  updateHeroCarouselUI();
+}
+
+// ================= PRODUCT PHOTO UPLOADER & NEW ITEM MANAGER =================
+let uploadedProductImageUrl = "";
+
+async function handleProductImageUpload(input) {
+  const file = input.files[0];
+  if (!file) return;
+
+  const statusEl = document.getElementById("uploadStatusBadge");
+  const previewImg = document.getElementById("uploadedImagePreview");
+  const urlInput = document.getElementById("newProdImageUrl");
+
+  if (statusEl) {
+    statusEl.className = "text-xs font-bold text-blue-600 block";
+    statusEl.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Uploading photo...';
+  }
+
+  const formData = new FormData();
+  formData.append("file", file);
+
+  try {
+    const res = await fetch("/api/admin/upload-image", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      uploadedProductImageUrl = data.url;
+      if (urlInput) urlInput.value = data.url;
+      if (previewImg) {
+        previewImg.src = data.url;
+        previewImg.classList.remove("hidden");
+      }
+      if (statusEl) {
+        statusEl.className = "text-xs font-bold text-emerald-600 block";
+        statusEl.innerHTML = '<i class="fa-solid fa-check-circle mr-1"></i> Image uploaded successfully!';
+      }
+      showToast("Photo uploaded to store!");
+      loadUploadedImagesGallery();
+    } else {
+      if (statusEl) {
+        statusEl.className = "text-xs font-bold text-rose-600 block";
+        statusEl.innerText = data.detail || "Upload failed.";
+      }
+    }
+  } catch (err) {
+    if (statusEl) {
+      statusEl.className = "text-xs font-bold text-rose-600 block";
+      statusEl.innerText = "Error uploading file.";
+    }
+  }
+}
+
+async function submitNewProduct(e) {
+  e.preventDefault();
+
+  const title = document.getElementById("newProdTitle").value.trim();
+  const category = document.getElementById("newProdCategory").value;
+  const wholesale = parseFloat(document.getElementById("newProdWholesale").value) || 0;
+  const selling = parseFloat(document.getElementById("newProdSelling").value) || 0;
+  const mrp = parseFloat(document.getElementById("newProdMrp").value) || 0;
+  const desc = document.getElementById("newProdDesc").value.trim();
+  const imgUrl = document.getElementById("newProdImageUrl").value.trim();
+
+  if (!title || !desc || !imgUrl || wholesale <= 0 || selling <= 0) {
+    showToast("Please fill all product fields and upload an image.");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("title", title);
+  formData.append("category", category);
+  formData.append("wholesale_price", wholesale);
+  formData.append("selling_price", selling);
+  formData.append("mrp", mrp || selling * 2);
+  formData.append("stock", 50);
+  formData.append("badge", "New Sourced ⭐");
+  formData.append("description", desc);
+  formData.append("image_url", imgUrl);
+
+  const btn = document.getElementById("submitNewProductBtn");
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Saving product...';
+  }
+
+  try {
+    const res = await fetch("/api/admin/add-product", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      showToast(data.message);
+      // Reset form
+      document.getElementById("newProductForm").reset();
+      const previewImg = document.getElementById("uploadedImagePreview");
+      if (previewImg) previewImg.classList.add("hidden");
+      const statusEl = document.getElementById("uploadStatusBadge");
+      if (statusEl) statusEl.innerText = "";
+      
+      // Refresh catalog
+      fetchCategories();
+      fetchProducts();
+    } else {
+      alert(data.detail || "Error adding product.");
+    }
+  } catch (err) {
+    alert("Error adding product.");
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-solid fa-plus mr-1"></i> Add Product to Store';
+    }
+  }
+}
+
+async function loadUploadedImagesGallery() {
+  const container = document.getElementById("uploadedGalleryContainer");
+  if (!container) return;
+
+  try {
+    const res = await fetch("/api/admin/uploaded-images");
+    const images = await res.json();
+    if (!images || images.length === 0) {
+      container.innerHTML = '<p class="text-xs text-slate-400">No custom photos uploaded yet.</p>';
+      return;
+    }
+
+    container.innerHTML = images
+      .map(
+        (img) => `
+        <div class="relative group rounded-xl overflow-hidden border border-slate-200 aspect-square bg-slate-50 cursor-pointer" onclick="useGalleryImage('${img.url}')">
+          <img src="${img.url}" class="w-full h-full object-cover group-hover:scale-105 transition" />
+          <div class="absolute inset-0 bg-blue-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-[10px] font-bold">
+            Select
+          </div>
+        </div>
+      `
+      )
+      .join("");
+  } catch (e) {
+    console.error("Error loading gallery:", e);
+  }
+}
+
+function useGalleryImage(url) {
+  const urlInput = document.getElementById("newProdImageUrl");
+  const previewImg = document.getElementById("uploadedImagePreview");
+  if (urlInput) urlInput.value = url;
+  if (previewImg) {
+    previewImg.src = url;
+    previewImg.classList.remove("hidden");
+  }
+  showToast("Selected photo for new product!");
+}
+
