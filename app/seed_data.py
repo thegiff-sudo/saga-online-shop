@@ -61,6 +61,119 @@ CATEGORIES = [
 ]
 
 PRODUCTS = [
+    # --- Official SAGA Brand Signature Products (Uploaded by User) ---
+    {
+        "id": "SAGA-OG-001",
+        "title": "Saga Fine Men's Outfitters 100% Merino Wool Tailored Blazer",
+        "slug": "saga-fine-mens-outfitters-100-merino-wool-tailored-blazer",
+        "category": "apparel-hoodies",
+        "deodap_sku": "DD-SAGA-BLAZ-WOOL",
+        "wholesale_price": 899.0,
+        "selling_price": 1999.0,
+        "mrp": 4499.0,
+        "stock": 40,
+        "rating": 4.9,
+        "review_count": 185,
+        "badge": "Saga Signature 🏷️",
+        "description": "Exquisite Italian cut tailored suit jacket crafted from 100% superfine Australian Merino wool. Features embossed gold 'Saga Store - Fine Men's Outfitters' signature label, hand-finished peak lapels, horn buttons, and breathable silk-blend interior lining.",
+        "features": [
+            "100% Superfine Australian Merino Wool",
+            "Signature Embossed Gold 'Saga Store - Fine Men's Outfitters' Tag",
+            "Hand-Tailored Structured Shoulders & Notched Lapel",
+            "Breathable Silk-Blend Luxury Interior Lining",
+            "Includes Saga Garment Cover & Wooden Suit Hanger"
+        ],
+        "image_url": "/static/images/products/saga_merino_wool_blazer_tag.jpg",
+        "gallery": [
+            "/static/images/products/saga_merino_wool_blazer_tag.jpg",
+            "/static/images/products/saga_luxury_suit_box_set.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-OG-002",
+        "title": "Saga Luxury Suiting Gift Box Set (Tailored Blazer + Trousers + Signature Bag)",
+        "slug": "saga-luxury-suiting-gift-box-set",
+        "category": "apparel-hoodies",
+        "deodap_sku": "DD-SAGA-SUIT-SET",
+        "wholesale_price": 1299.0,
+        "selling_price": 2799.0,
+        "mrp": 5999.0,
+        "stock": 35,
+        "rating": 5.0,
+        "review_count": 94,
+        "badge": "Luxury Gift Box 🎁",
+        "description": "The complete luxury gentleman's ensemble presented in a premium rigid gift presentation box with gold-foil Saga Store branding. Includes precision-tailored charcoal wool blazer, matching flat-front trousers, leather belt, pocket square, and Saga gold-stamped luxury carry bag.",
+        "features": [
+            "Complete 3-Piece Gentleman's Luxury Set in Rigid Gift Box",
+            "Woven Gold 'Saga Store' Neck & Pocket Interior Labels",
+            "Matching Flat-Front Trousers with Adjustable Waistband",
+            "Includes Premium Saga Gold-Foil Rope Shopping Bag",
+            "Perfect for Weddings, Executive Meetings & Black-Tie Galas"
+        ],
+        "image_url": "/static/images/products/saga_luxury_suit_box_set.jpg",
+        "gallery": [
+            "/static/images/products/saga_luxury_suit_box_set.jpg",
+            "/static/images/products/saga_merino_wool_blazer_tag.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-OG-003",
+        "title": "Saga Gold-Embroidered Sage Green Heavyweight Streetwear Hoodie",
+        "slug": "saga-gold-embroidered-sage-green-hoodie",
+        "category": "apparel-hoodies",
+        "deodap_sku": "DD-SAGA-HOOD-SAGE",
+        "wholesale_price": 450.0,
+        "selling_price": 999.0,
+        "mrp": 2299.0,
+        "stock": 90,
+        "rating": 4.9,
+        "review_count": 410,
+        "badge": "Brand Icon 🔥",
+        "description": "Our iconic brand staple. 420 GSM ultra-heavyweight combed French Terry cotton in aesthetic sage green with high-density metallic gold thread 'Saga' script chest embroidery. Finished with custom Saga Store embossed hangtag, double-walled hood, and brass hardware.",
+        "features": [
+            "420 GSM Ultra-Heavy Combed French Terry Cotton",
+            "High-Density 3D Metallic Gold Thread Chest Embroidery",
+            "Custom Saga Store Premium Tag with Golden Cord",
+            "Double-Layer Thermal Hood with Brass Metal Aglets",
+            "Relaxed Drop-Shoulder Silhouette & Kangaroo Pocket"
+        ],
+        "image_url": "/static/images/products/saga_gold_embroidered_sage_hoodie.jpg",
+        "gallery": [
+            "/static/images/products/saga_gold_embroidered_sage_hoodie.jpg",
+            "/static/images/banners/showcase_3d_circular_podium.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-OG-004",
+        "title": "Saga Winter Thermal Sherpa-Lined Heavy Fleece Hoodie (Beige Sand)",
+        "slug": "saga-winter-thermal-sherpa-lined-hoodie-beige",
+        "category": "apparel-hoodies",
+        "deodap_sku": "DD-SAGA-SHRP-HOOD",
+        "wholesale_price": 520.0,
+        "selling_price": 1199.0,
+        "mrp": 2699.0,
+        "stock": 65,
+        "rating": 4.8,
+        "review_count": 320,
+        "badge": "Winter Warmth ❄️",
+        "description": "Engineered for harsh winter chills. Heavyweight brushed cotton-poly fleece outer shell insulated with an ultra-soft, cloud-like sherpa fleece inner lining throughout the body and hood. Features chest embroidered Saga script, dual-tone drawstrings, and deep kangaroo warming pockets.",
+        "features": [
+            "Plush Cloud-Soft Sherpa Fleece Thermal Body & Hood Lining",
+            "Subtle Gold Embroidered 'Saga' Script on Chest",
+            "Heavy-Duty Dual-Tone Contrast Thermal Drawstrings",
+            "Windproof Ribbed Ankle Cuffs & Waistband",
+            "Deep Sherpa-Lined Hand-Warmer Kangaroo Pocket"
+        ],
+        "image_url": "/static/images/products/saga_sherpa_fleece_winter_hoodie.jpg",
+        "gallery": [
+            "/static/images/products/saga_sherpa_fleece_winter_hoodie.jpg",
+            "/static/images/products/saga_gold_embroidered_sage_hoodie.jpg"
+        ],
+        "is_trending": 1
+    },
     # --- Baby & Kids (From Saga Uploaded Banners) ---
     {
         "id": "SAGA-KID-001",
