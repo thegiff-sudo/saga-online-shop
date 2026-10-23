@@ -1,0 +1,209 @@
+/* SAGA ONLINE SHOP - Modern E-Commerce Custom Styles */
+
+:root {
+  --primary-color: #1e3a8a;
+  --primary-hover: #1d4ed8;
+  --accent-color: #f59e0b;
+  --whatsapp-green: #25d366;
+  --whatsapp-hover: #128c7e;
+  --bg-soft: #f8fafc;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Card hover animation */
+.product-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Subtle image zoom */
+.product-image-container img {
+  transition: transform 0.4s ease;
+}
+.product-card:hover .product-image-container img {
+  transform: scale(1.05);
+}
+
+/* Floating WhatsApp Button with Pulse */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 84px;
+  right: 22px;
+  background-color: var(--whatsapp-green);
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 12px 18px 12px 14px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.whatsapp-float-btn:hover {
+  background-color: var(--whatsapp-hover);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+  color: white;
+}
+.whatsapp-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  border: 2px solid var(--whatsapp-green);
+  animation: pulse-ring 2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float-btn span {
+    display: none;
+  }
+  .whatsapp-float-btn {
+    padding: 14px;
+    border-radius: 50%;
+    bottom: 74px;
+    right: 16px;
+  }
+}
+
+/* Discount Ribbon */
+.discount-ribbon {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Owner Mode Dropship Margin Badge */
+.dropship-margin-badge {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 5px rgba(16, 185, 129, 0.25);
+}
+
+/* Hide / Show Owner Mode elements */
+body:not(.owner-mode-active) .owner-only {
+  display: none !important;
+}
+
+/* Bottom Navigation Bar for Mobile */
+.mobile-nav-bar {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-nav-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    z-index: 990;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+  }
+  .mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+    position: relative;
+    padding: 6px 12px;
+  }
+  .mobile-nav-item.active {
+    color: #1e3a8a;
+    font-weight: 700;
+  }
+  .mobile-nav-item i {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+  body {
+    padding-bottom: 68px;
+  }
+}
+
+/* Sliding Drawer Transitions */
+.drawer-backdrop {
+  transition: opacity 0.3s ease;
+}
+.drawer-content {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Skeleton Loading Placeholder */
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
