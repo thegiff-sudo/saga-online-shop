@@ -310,10 +310,10 @@ function renderProducts() {
               </div>
             </div>
 
-            <!-- Free delivery & COD badges -->
+            <!-- Free delivery & Secure payment badges -->
             <div class="flex items-center space-x-3 text-[11px] text-slate-500 mb-3">
-              <span class="flex items-center"><i class="fa-solid fa-truck-fast text-blue-600 mr-1"></i> Fast Dispatch</span>
-              <span class="flex items-center"><i class="fa-solid fa-hand-holding-dollar text-emerald-600 mr-1"></i> COD Avail</span>
+              <span class="flex items-center"><i class="fa-solid fa-truck-fast text-blue-600 mr-1"></i> Fast Air Dispatch</span>
+              <span class="flex items-center"><i class="fa-solid fa-shield-halved text-emerald-600 mr-1"></i> 100% Secure UPI</span>
             </div>
           </div>
 
@@ -522,7 +522,7 @@ function renderProductModalContent(prod, related) {
           <!-- Pincode Check -->
           <div class="bg-white p-3.5 rounded-2xl border border-slate-200 mb-6">
             <div class="text-xs font-bold text-slate-800 mb-1.5 flex items-center justify-between">
-              <span><i class="fa-solid fa-location-dot text-blue-900 mr-1.5"></i> Check Delivery & COD Availability:</span>
+              <span><i class="fa-solid fa-location-dot text-blue-900 mr-1.5"></i> Check Delivery Availability:</span>
             </div>
             <div class="flex space-x-2">
               <input 
@@ -1024,7 +1024,7 @@ function showOrderConfirmationModal(orderData) {
       <div class="space-y-1.5 text-xs text-slate-600">
         <div><b class="text-slate-900">Customer:</b> ${escapeHtml(orderData.customer_name)} (${orderData.customer_phone})</div>
         <div><b class="text-slate-900">Delivery Address:</b> ${escapeHtml(orderData.address)}</div>
-        <div><b class="text-slate-900">Total Paid/COD:</b> <span class="text-sm font-black text-slate-950">₹${orderData.total_amount}</span></div>
+        <div><b class="text-slate-900">Total Paid (Prepaid Online):</b> <span class="text-sm font-black text-slate-950">₹${orderData.total_amount}</span></div>
         <div class="text-emerald-700 font-semibold pt-1">
           <i class="fa-solid fa-truck-fast mr-1"></i> Dispatched via DeoDap Direct Air Cargo. Tracking: <b>${orderData.tracking_number}</b>
         </div>

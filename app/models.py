@@ -13,7 +13,7 @@ class OrderCreateRequest(BaseModel):
     city: str
     state: str
     pincode: str
-    payment_method: str = "Cash on Delivery"
+    payment_method: str = "UPI Online"
     coupon_code: Optional[str] = ""
     items: List[OrderItemInput]
 

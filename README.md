@@ -36,7 +36,7 @@ A modern, mobile-friendly dropshipping e-commerce web application with full back
    - Interactive Product Quick-View modal with image gallery, specs, and Indian pincode delivery checker.
    - Slide-out Cart Drawer with item quantities, free shipping progress bar, and coupon codes (`SAGA10`, `WELCOME50`).
    - Express Checkout with customer shipping address (Full Name, Phone, Address, City, State, Pincode).
-   - Payment Methods: **Cash on Delivery (COD)** and **Instant UPI / QR Payment**.
+   - Payment Methods: **100% Secure Instant UPI & Card Payments (Google Pay, PhonePe, Paytm, Cards)**.
    - Order Confirmation screen generating a unique Order ID (`#SAGA-XXXXX`), invoice summary, and printable receipt.
    - Real-time Order Tracking lookup (`#SAGA-XXXXX`).
 

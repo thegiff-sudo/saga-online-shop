@@ -255,8 +255,8 @@ def check_pincode(payload: PincodeRequest):
         "pincode": pin,
         "estimated_delivery": delivery_date,
         "shipping_method": "DeoDap Express Air Surface",
-        "cod_available": True,
-        "message": f"Standard Delivery by {delivery_date}. Cash on Delivery (COD) Available!"
+        "cod_available": False,
+        "message": f"Standard Delivery by {delivery_date}. 100% Express Air Shipping!"
     }
 
 @app.post("/api/orders")
@@ -312,7 +312,7 @@ def create_order(payload: OrderCreateRequest):
     total_margin = round(total_amount - total_wholesale - shipping_fee, 2)
 
     order_id = f"SAGA-{random.randint(10000, 99999)}"
-    payment_status = "Paid" if payload.payment_method == "UPI Online" else "Pending (COD)"
+    payment_status = "Paid (Prepaid Online / UPI)"
     tracking_number = f"DD-EXP-{random.randint(100000, 999999)}"
 
     cursor.execute("""
