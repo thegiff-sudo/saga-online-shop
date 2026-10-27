@@ -1478,3 +1478,114 @@ function useGalleryImage(url) {
   showToast("Selected photo for new product!");
 }
 
+// ==================== THE WOLF NUTRITION CONTROLS ====================
+function scrollToWolfSection() {
+  const sec = document.getElementById("wolfNutritionSection");
+  if (sec) sec.scrollIntoView({ behavior: "smooth" });
+}
+
+function toggleWolfVideo(idx) {
+  const vid = document.getElementById(`wolfVid${idx}`);
+  const wrapper = document.getElementById(`videoWrapper${idx}`);
+  const btn = document.getElementById(`wolfPlayBtn${idx}`);
+  if (!vid) return;
+
+  if (vid.paused) {
+    // Pause other wolf videos first
+    [1, 2, 3].forEach((otherIdx) => {
+      if (otherIdx !== idx) {
+        const otherVid = document.getElementById(`wolfVid${otherIdx}`);
+        const otherWrap = document.getElementById(`videoWrapper${otherIdx}`);
+        const otherBtn = document.getElementById(`wolfPlayBtn${otherIdx}`);
+        if (otherVid && !otherVid.paused) {
+          otherVid.pause();
+          if (otherWrap) otherWrap.classList.remove("is-playing");
+          if (otherBtn) otherBtn.innerHTML = '<i class="fa-solid fa-play ml-1"></i>';
+        }
+      }
+    });
+
+    vid.play().then(() => {
+      if (wrapper) wrapper.classList.add("is-playing");
+      if (btn) btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    }).catch(err => {
+      console.log("Video play error:", err);
+    });
+  } else {
+    vid.pause();
+    if (wrapper) wrapper.classList.remove("is-playing");
+    if (btn) btn.innerHTML = '<i class="fa-solid fa-play ml-1"></i>';
+  }
+}
+
+function toggleWolfMute(idx, event) {
+  if (event) event.stopPropagation();
+  const vid = document.getElementById(`wolfVid${idx}`);
+  const muteBtn = document.getElementById(`wolfMuteBtn${idx}`);
+  if (!vid) return;
+
+  vid.muted = !vid.muted;
+  if (muteBtn) {
+    muteBtn.innerHTML = vid.muted 
+      ? '<i class="fa-solid fa-volume-xmark"></i>' 
+      : '<i class="fa-solid fa-volume-high"></i>';
+  }
+}
+
+const wolfAthleteData = {
+  1: {
+    img: "/static/images/wolf_nutrition/results/athlete_result_1.jpg",
+    title: "Vascularity & Muscle Hardness",
+    desc: "Achieved razor-sharp muscle separation and deep striations in quads and arms using The Wolf 100% Whey Isolate daily."
+  },
+  2: {
+    img: "/static/images/wolf_nutrition/results/athlete_result_2.jpg",
+    title: "Front Double Biceps Peak",
+    desc: "Explosive bicep thickness and wide lat spread achieved with zero bloating and rapid post-workout protein synthesis."
+  },
+  3: {
+    img: "/static/images/wolf_nutrition/results/athlete_result_3.jpg",
+    title: "Quad & Deltoid Definition",
+    desc: "Clean lean mass building with zero fat accumulation. DigeZyme enzymes ensure 100% amino acid bioavailability."
+  },
+  4: {
+    img: "/static/images/wolf_nutrition/results/athlete_result_4.jpg",
+    title: "Competition-Ready Physique",
+    desc: "Stage-ready muscle fullness and symmetry developed with consistent heavy compound lifts and The Wolf Nutrition isolate."
+  },
+  5: {
+    img: "/static/images/wolf_nutrition/results/athlete_result_5.jpg",
+    title: "Full Body Density & Hardness",
+    desc: "Dense muscularity, carved abdominals and thick arms fueled by 2 scoops of Vanilla Bean Fusion daily."
+  },
+  6: {
+    img: "/static/images/wolf_nutrition/results/athlete_result_6.jpg",
+    title: "Shoulder Striations & V-Taper",
+    desc: "Dry, 3D deltoids and rock-hard chest density. Verified athlete results showcasing the power of pure Whey Isolate."
+  }
+};
+
+function openWolfAthleteModal(idx) {
+  const modal = document.getElementById("wolfAthleteModal");
+  const modalImg = document.getElementById("wolfAthleteModalImg");
+  const modalTitle = document.getElementById("wolfAthleteModalTitle");
+  const modalDesc = document.getElementById("wolfAthleteModalDesc");
+
+  const data = wolfAthleteData[idx];
+  if (!data || !modal) return;
+
+  if (modalImg) modalImg.src = data.img;
+  if (modalTitle) modalTitle.innerText = data.title;
+  if (modalDesc) modalDesc.innerText = data.desc;
+
+  modal.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeWolfAthleteModal() {
+  const modal = document.getElementById("wolfAthleteModal");
+  if (modal) modal.classList.add("hidden");
+  document.body.style.overflow = "auto";
+}
+
+

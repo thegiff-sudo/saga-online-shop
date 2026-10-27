@@ -416,6 +416,10 @@
 
           <!-- Interactive Category Jump Buttons -->
           <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+            <button onclick="scrollToWolfSection()" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-slate-950 font-black text-xs transition flex items-center space-x-1.5 shadow-md">
+              <i class="fa-solid fa-dumbbell text-slate-950"></i>
+              <span>🐺 The Wolf Nutrition</span>
+            </button>
             <button onclick="selectCategory('desk-decor')" class="px-3.5 py-2 rounded-xl bg-amber-100/80 hover:bg-amber-200 text-amber-950 font-bold text-xs transition flex items-center space-x-1.5 shadow-sm">
               <span>🕉️ Desk Decor & Divine</span>
             </button>
@@ -499,6 +503,640 @@
           </button>
         </div>
 
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- 🔥 THE WOLF NUTRITION • DEDICATED EXCLUSIVE BRAND SECTION 🔥 -->
+  <!-- ======================================================== -->
+  <section id="wolfNutritionSection" class="wolf-section text-white py-16 border-y-2 border-amber-500/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Brand Header Banner & Identity -->
+      <div class="relative bg-gradient-to-r from-slate-900/90 via-slate-950 to-slate-900/90 border border-amber-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl overflow-hidden">
+        <!-- Glow accent in background -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Brand Emblem & Messaging -->
+          <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+            <div class="inline-flex items-center space-x-2 bg-amber-500/20 border border-amber-400/40 text-amber-300 px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-sm">
+              <i class="fa-solid fa-crown text-amber-400"></i>
+              <span>Official Brand Partnership • The Wolf Nutrition</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center lg:items-start space-y-3 sm:space-y-0 sm:space-x-4">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-xl shadow-amber-500/20 flex-shrink-0 bg-black">
+                <img 
+                  src="/static/images/wolf_nutrition/wolf_logo_circle.jpg" 
+                  alt="The Wolf Nutrition Official Emblem" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white wolf-gold-glow">
+                  THE WOLF <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500">NUTRITION</span>
+                </h2>
+                <div class="text-xs sm:text-sm font-black text-amber-400 tracking-widest uppercase mt-1">
+                  Lead With Strength • Work Out Live Fierce
+                </div>
+              </div>
+            </div>
+
+            <p class="text-sm text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Engineered for athletes, lifters, and bodybuilders who demand uncompromising purity. Ultra-refined 100% Whey Isolate packed with 27g protein, explosive BCAAs, and zero bloat digestive enzymes.
+            </p>
+
+            <!-- Key Feature Badges -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+              <div class="bg-slate-900/80 border border-slate-700/80 p-2.5 rounded-xl text-center">
+                <div class="text-amber-400 font-black text-sm">27g Protein</div>
+                <div class="text-[10px] text-slate-400 uppercase font-bold">Pure WPI Scoop</div>
+              </div>
+              <div class="bg-slate-900/80 border border-slate-700/80 p-2.5 rounded-xl text-center">
+                <div class="text-amber-400 font-black text-sm">6.2g BCAA</div>
+                <div class="text-[10px] text-slate-400 uppercase font-bold">Fast Recovery</div>
+              </div>
+              <div class="bg-slate-900/80 border border-slate-700/80 p-2.5 rounded-xl text-center">
+                <div class="text-emerald-400 font-black text-sm">0g Sugar</div>
+                <div class="text-[10px] text-slate-400 uppercase font-bold">Zero Bloat</div>
+              </div>
+              <div class="bg-slate-900/80 border border-slate-700/80 p-2.5 rounded-xl text-center">
+                <div class="text-emerald-400 font-black text-sm">100% UPI</div>
+                <div class="text-[10px] text-slate-400 uppercase font-bold">Instant Prepaid</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-3">
+              <button 
+                onclick="document.getElementById('wolfProductsGrid').scrollIntoView({ behavior: 'smooth' })"
+                class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 font-black text-xs transition shadow-lg shadow-amber-400/25 active:scale-95 flex items-center space-x-2"
+              >
+                <span>Shop Wolf Nutrition</span>
+                <i class="fa-solid fa-arrow-down text-[11px]"></i>
+              </button>
+              <a 
+                href="https://wa.me/919922163722?text=Hello%20SAGA%20Online%20Shop%2C%20I%20am%20interested%20in%20The%20Wolf%20Nutrition%20Whey%20Protein"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-md flex items-center space-x-2"
+              >
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>Order on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Horizontal Metallic Wolf Banner Visual -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative rounded-2xl overflow-hidden border-2 border-amber-500/40 shadow-2xl shadow-amber-500/10 group cursor-pointer max-w-md w-full">
+              <img 
+                src="/static/images/wolf_nutrition/wolf_logo_banner.jpg" 
+                alt="The Wolf Lite Fitness - Work Out Live Fierce" 
+                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs">
+                <span class="bg-amber-500/90 text-slate-950 font-black px-2.5 py-1 rounded-md text-[11px]">
+                  ⭐ Verified Authentic
+                </span>
+                <span class="text-amber-300 font-extrabold text-[11px]">
+                  #LeadWithStrength
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Part 1: Wolf Nutrition Core Products Grid (4 Products) -->
+      <div>
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2 mb-6 border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-xs font-black text-amber-400 uppercase tracking-widest">
+              <i class="fa-solid fa-fire mr-1"></i> Core Products
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">
+              The Wolf Nutrition Lineup
+            </h3>
+          </div>
+          <p class="text-xs text-slate-400">100% Prepaid Online Payments • Free Fast Delivery</p>
+        </div>
+
+        <div id="wolfProductsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Chocolate Fury -->
+          <div class="wolf-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-square bg-slate-900/60 p-4 flex items-center justify-center border-b border-slate-800 cursor-pointer overflow-hidden" onclick="openProductModal('SAGA-WOLF-001')">
+              <span class="absolute top-3 left-3 bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full z-10 shadow">
+                Lead With Strength 🐺
+              </span>
+              <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md z-10">
+                47% OFF
+              </span>
+              <img 
+                src="/static/images/wolf_nutrition/wolf_whey_chocolate.jpg" 
+                alt="Chocolate Fury Whey Isolate" 
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-400 text-xs mb-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="text-slate-400 text-[11px] ml-1">(540 reviews)</span>
+                </div>
+                <h4 class="text-sm font-bold text-white group-hover:text-amber-400 transition cursor-pointer line-clamp-2" onclick="openProductModal('SAGA-WOLF-001')">
+                  The Wolf Enterprises Chocolate Fury 100% Pure Whey Isolate (2.27kg / 5 LBS)
+                </h4>
+                <div class="text-[11px] text-slate-400 mt-1 line-clamp-2">
+                  27g Protein • 6.2g BCAA • Rich Dutch Cocoa • Zero Bloat
+                </div>
+                <div class="flex items-baseline space-x-2 mt-3">
+                  <span class="text-xl font-black text-amber-400">₹2,899</span>
+                  <span class="text-xs text-slate-400 line-through">₹5,499</span>
+                  <span class="text-xs text-emerald-400 font-bold">Save ₹2,600</span>
+                </div>
+                <!-- Merchant Profit Row -->
+                <div class="owner-only mt-2">
+                  <div class="dropship-margin-badge text-[10px] w-full justify-between">
+                    <span>Base: ₹1,450</span>
+                    <span class="font-extrabold text-amber-200">+₹1,449 Profit (50.0%)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800">
+                <button 
+                  onclick="addToCart('SAGA-WOLF-001', 1)"
+                  class="py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition flex items-center justify-center space-x-1"
+                >
+                  <i class="fa-solid fa-cart-plus text-[11px]"></i>
+                  <span>Add Cart</span>
+                </button>
+                <button 
+                  onclick="buyNow('SAGA-WOLF-001')"
+                  class="py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 text-xs font-black transition flex items-center justify-center space-x-1 shadow"
+                >
+                  <span>Buy Now</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Vanilla Bean Fusion -->
+          <div class="wolf-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-square bg-slate-900/60 p-4 flex items-center justify-center border-b border-slate-800 cursor-pointer overflow-hidden" onclick="openProductModal('SAGA-WOLF-002')">
+              <span class="absolute top-3 left-3 bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full z-10 shadow">
+                Ultra-Refined ⭐
+              </span>
+              <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md z-10">
+                47% OFF
+              </span>
+              <img 
+                src="/static/images/wolf_nutrition/wolf_whey_vanilla.jpg" 
+                alt="Vanilla Bean Fusion Whey Isolate" 
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-400 text-xs mb-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="text-slate-400 text-[11px] ml-1">(420 reviews)</span>
+                </div>
+                <h4 class="text-sm font-bold text-white group-hover:text-amber-400 transition cursor-pointer line-clamp-2" onclick="openProductModal('SAGA-WOLF-002')">
+                  The Wolf Enterprises Vanilla Bean Fusion Whey Isolate (2.27kg / 5 LBS)
+                </h4>
+                <div class="text-[11px] text-slate-400 mt-1 line-clamp-2">
+                  Natural Madagascar Vanilla • 27g Pure Protein • Steel Scoop
+                </div>
+                <div class="flex items-baseline space-x-2 mt-3">
+                  <span class="text-xl font-black text-amber-400">₹2,899</span>
+                  <span class="text-xs text-slate-400 line-through">₹5,499</span>
+                  <span class="text-xs text-emerald-400 font-bold">Save ₹2,600</span>
+                </div>
+                <!-- Merchant Profit Row -->
+                <div class="owner-only mt-2">
+                  <div class="dropship-margin-badge text-[10px] w-full justify-between">
+                    <span>Base: ₹1,450</span>
+                    <span class="font-extrabold text-amber-200">+₹1,449 Profit (50.0%)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800">
+                <button 
+                  onclick="addToCart('SAGA-WOLF-002', 1)"
+                  class="py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition flex items-center justify-center space-x-1"
+                >
+                  <i class="fa-solid fa-cart-plus text-[11px]"></i>
+                  <span>Add Cart</span>
+                </button>
+                <button 
+                  onclick="buyNow('SAGA-WOLF-002')"
+                  class="py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 text-xs font-black transition flex items-center justify-center space-x-1 shadow"
+                >
+                  <span>Buy Now</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Ultimate Muscle Recovery Formula -->
+          <div class="wolf-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-square bg-slate-900/60 p-4 flex items-center justify-center border-b border-slate-800 cursor-pointer overflow-hidden" onclick="openProductModal('SAGA-WOLF-003')">
+              <span class="absolute top-3 left-3 bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full z-10 shadow">
+                Pro Formula 🥇
+              </span>
+              <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md z-10">
+                47% OFF
+              </span>
+              <img 
+                src="/static/images/wolf_nutrition/wolf_whey_recovery.jpg" 
+                alt="Ultimate Muscle Recovery Whey Formula" 
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-400 text-xs mb-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="text-slate-400 text-[11px] ml-1">(388 reviews)</span>
+                </div>
+                <h4 class="text-sm font-bold text-white group-hover:text-amber-400 transition cursor-pointer line-clamp-2" onclick="openProductModal('SAGA-WOLF-003')">
+                  The Wolf Enterprises Ultimate Muscle Recovery Formula (Gold Edition Tub)
+                </h4>
+                <div class="text-[11px] text-slate-400 mt-1 line-clamp-2">
+                  Cold-Filtered CFM Peptides • Micronized Bio-Actives • Metal Tub
+                </div>
+                <div class="flex items-baseline space-x-2 mt-3">
+                  <span class="text-xl font-black text-amber-400">₹3,199</span>
+                  <span class="text-xs text-slate-400 line-through">₹5,999</span>
+                  <span class="text-xs text-emerald-400 font-bold">Save ₹2,800</span>
+                </div>
+                <!-- Merchant Profit Row -->
+                <div class="owner-only mt-2">
+                  <div class="dropship-margin-badge text-[10px] w-full justify-between">
+                    <span>Base: ₹1,600</span>
+                    <span class="font-extrabold text-amber-200">+₹1,599 Profit (50.0%)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800">
+                <button 
+                  onclick="addToCart('SAGA-WOLF-003', 1)"
+                  class="py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition flex items-center justify-center space-x-1"
+                >
+                  <i class="fa-solid fa-cart-plus text-[11px]"></i>
+                  <span>Add Cart</span>
+                </button>
+                <button 
+                  onclick="buyNow('SAGA-WOLF-003')"
+                  class="py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 text-xs font-black transition flex items-center justify-center space-x-1 shadow"
+                >
+                  <span>Buy Now</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Heavy-Duty Stainless Steel Shaker Bottle -->
+          <div class="wolf-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-square bg-slate-900/60 p-4 flex items-center justify-center border-b border-slate-800 cursor-pointer overflow-hidden" onclick="openProductModal('SAGA-WOLF-004')">
+              <span class="absolute top-3 left-3 bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full z-10 shadow">
+                Wolf Strength 🐾
+              </span>
+              <span class="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md z-10">
+                60% OFF
+              </span>
+              <img 
+                src="/static/images/wolf_nutrition/wolf_shaker.jpg" 
+                alt="Wolf Strength Stainless Steel Shaker" 
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-4 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center space-x-1 text-amber-400 text-xs mb-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <span class="text-slate-400 text-[11px] ml-1">(670 reviews)</span>
+                </div>
+                <h4 class="text-sm font-bold text-white group-hover:text-amber-400 transition cursor-pointer line-clamp-2" onclick="openProductModal('SAGA-WOLF-004')">
+                  The Wolf Strength Heavy-Duty Brushed Stainless Steel Gym Shaker (750ml)
+                </h4>
+                <div class="text-[11px] text-slate-400 mt-1 line-clamp-2">
+                  304 Brushed Steel • Odorless • Double-Wall Cold • Cyclone Mesh
+                </div>
+                <div class="flex items-baseline space-x-2 mt-3">
+                  <span class="text-xl font-black text-amber-400">₹599</span>
+                  <span class="text-xs text-slate-400 line-through">₹1,499</span>
+                  <span class="text-xs text-emerald-400 font-bold">Save ₹900</span>
+                </div>
+                <!-- Merchant Profit Row -->
+                <div class="owner-only mt-2">
+                  <div class="dropship-margin-badge text-[10px] w-full justify-between">
+                    <span>Base: ₹220</span>
+                    <span class="font-extrabold text-amber-200">+₹379 Profit (63.3%)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-slate-800">
+                <button 
+                  onclick="addToCart('SAGA-WOLF-004', 1)"
+                  class="py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition flex items-center justify-center space-x-1"
+                >
+                  <i class="fa-solid fa-cart-plus text-[11px]"></i>
+                  <span>Add Cart</span>
+                </button>
+                <button 
+                  onclick="buyNow('SAGA-WOLF-004')"
+                  class="py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 text-xs font-black transition flex items-center justify-center space-x-1 shadow"
+                >
+                  <span>Buy Now</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Part 2: Gym Workout & Training Action Reels (3 Videos) -->
+      <div>
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2 mb-6 border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-xs font-black text-amber-400 uppercase tracking-widest">
+              <i class="fa-solid fa-video mr-1"></i> The Wolf Training Lab
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">
+              Real Gym Workouts • High-Octane Action
+            </h3>
+          </div>
+          <p class="text-xs text-slate-400">Tap play to stream live gym workouts</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Video 1: Dumbbell Curls -->
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between space-y-3">
+            <div class="wolf-video-wrapper aspect-[9/16] max-h-[420px] w-full" id="videoWrapper1">
+              <video 
+                id="wolfVid1"
+                class="w-full h-full object-cover"
+                poster="/static/videos/wolf_workout_biceps_poster.jpg"
+                preload="metadata"
+                playsinline
+                loop
+                onclick="toggleWolfVideo(1)"
+              >
+                <source src="/static/videos/wolf_workout_biceps.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+              <button class="wolf-video-play-btn" onclick="toggleWolfVideo(1)" id="wolfPlayBtn1">
+                <i class="fa-solid fa-play ml-1"></i>
+              </button>
+              <!-- Video Controls Overlay -->
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white z-20 pointer-events-none">
+                <span class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-lg text-[10px] font-bold border border-white/10 pointer-events-auto">
+                  <i class="fa-solid fa-dumbbell text-amber-400 mr-1"></i> Bicep Pump Focus
+                </span>
+                <button onclick="toggleWolfMute(1, event)" class="w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md text-amber-400 flex items-center justify-center pointer-events-auto hover:bg-slate-900 border border-white/10" id="wolfMuteBtn1" title="Toggle sound">
+                  <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white">Peak Incline Dumbbell Curls</h4>
+              <p class="text-xs text-slate-400 mt-1">
+                Isolating bicep peaks and eccentric contraction powered by intra-workout amino acids.
+              </p>
+            </div>
+          </div>
+
+          <!-- Video 2: Heavy Barbell Deadlift -->
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between space-y-3">
+            <div class="wolf-video-wrapper aspect-[9/16] max-h-[420px] w-full" id="videoWrapper2">
+              <video 
+                id="wolfVid2"
+                class="w-full h-full object-cover"
+                poster="/static/videos/wolf_workout_deadlift_poster.jpg"
+                preload="metadata"
+                playsinline
+                loop
+                onclick="toggleWolfVideo(2)"
+              >
+                <source src="/static/videos/wolf_workout_deadlift.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+              <button class="wolf-video-play-btn" onclick="toggleWolfVideo(2)" id="wolfPlayBtn2">
+                <i class="fa-solid fa-play ml-1"></i>
+              </button>
+              <!-- Video Controls Overlay -->
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white z-20 pointer-events-none">
+                <span class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-lg text-[10px] font-bold border border-white/10 pointer-events-auto">
+                  <i class="fa-solid fa-bolt text-amber-400 mr-1"></i> Heavy Deadlifts
+                </span>
+                <button onclick="toggleWolfMute(2, event)" class="w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md text-amber-400 flex items-center justify-center pointer-events-auto hover:bg-slate-900 border border-white/10" id="wolfMuteBtn2" title="Toggle sound">
+                  <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white">Raw Posterior Chain Power</h4>
+              <p class="text-xs text-slate-400 mt-1">
+                Pulling heavy iron with supreme form and explosive central nervous system drive.
+              </p>
+            </div>
+          </div>
+
+          <!-- Video 3: Seated Cable Lat Rows -->
+          <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between space-y-3">
+            <div class="wolf-video-wrapper aspect-[9/16] max-h-[420px] w-full" id="videoWrapper3">
+              <video 
+                id="wolfVid3"
+                class="w-full h-full object-cover"
+                poster="/static/videos/wolf_workout_back_poster.jpg"
+                preload="metadata"
+                playsinline
+                loop
+                onclick="toggleWolfVideo(3)"
+              >
+                <source src="/static/videos/wolf_workout_back.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+              <button class="wolf-video-play-btn" onclick="toggleWolfVideo(3)" id="wolfPlayBtn3">
+                <i class="fa-solid fa-play ml-1"></i>
+              </button>
+              <!-- Video Controls Overlay -->
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white z-20 pointer-events-none">
+                <span class="bg-slate-950/80 backdrop-blur-md px-2.5 py-1 rounded-lg text-[10px] font-bold border border-white/10 pointer-events-auto">
+                  <i class="fa-solid fa-shield text-amber-400 mr-1"></i> Lat Density Rows
+                </span>
+                <button onclick="toggleWolfMute(3, event)" class="w-8 h-8 rounded-full bg-slate-900/80 backdrop-blur-md text-amber-400 flex items-center justify-center pointer-events-auto hover:bg-slate-900 border border-white/10" id="wolfMuteBtn3" title="Toggle sound">
+                  <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white">Seated Cable Row Contraction</h4>
+              <p class="text-xs text-slate-400 mt-1">
+                Carving deep mid-back thickness and V-taper wings with controlled cadence.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Part 3: Real Athlete Transformation Wall (6 Photos) -->
+      <div>
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2 mb-6 border-b border-slate-800 pb-4">
+          <div>
+            <span class="text-xs font-black text-amber-400 uppercase tracking-widest">
+              <i class="fa-solid fa-trophy mr-1"></i> Athlete Results
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-black text-white mt-1">
+              Physique Results • Fueled by The Wolf Nutrition
+            </h3>
+          </div>
+          <p class="text-xs text-slate-400">Tap any photo to view full-size transformation details</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          
+          <!-- Athlete Result 1 -->
+          <div class="wolf-result-card aspect-[9/16]" onclick="openWolfAthleteModal(1)">
+            <img 
+              src="/static/images/wolf_nutrition/results/athlete_result_1.jpg" 
+              alt="Wolf Nutrition Athlete Result 1" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 text-left">
+              <span class="bg-amber-400 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-full inline-block mb-1">
+                Verified Result ⭐
+              </span>
+              <div class="text-[11px] font-bold text-white leading-tight">Side Arm & Leg Cut</div>
+              <div class="text-[9px] text-amber-300 font-semibold">Lean Muscle Hardness</div>
+            </div>
+          </div>
+
+          <!-- Athlete Result 2 -->
+          <div class="wolf-result-card aspect-[9/16]" onclick="openWolfAthleteModal(2)">
+            <img 
+              src="/static/images/wolf_nutrition/results/athlete_result_2.jpg" 
+              alt="Wolf Nutrition Athlete Result 2" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 text-left">
+              <span class="bg-amber-400 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-full inline-block mb-1">
+                Verified Result ⭐
+              </span>
+              <div class="text-[11px] font-bold text-white leading-tight">Front Bicep Peak</div>
+              <div class="text-[9px] text-amber-300 font-semibold">27g WPI Gains</div>
+            </div>
+          </div>
+
+          <!-- Athlete Result 3 -->
+          <div class="wolf-result-card aspect-[9/16]" onclick="openWolfAthleteModal(3)">
+            <img 
+              src="/static/images/wolf_nutrition/results/athlete_result_3.jpg" 
+              alt="Wolf Nutrition Athlete Result 3" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 text-left">
+              <span class="bg-amber-400 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-full inline-block mb-1">
+                Verified Result ⭐
+              </span>
+              <div class="text-[11px] font-bold text-white leading-tight">Quad & Deltoid Cut</div>
+              <div class="text-[9px] text-amber-300 font-semibold">Zero Bloat Formula</div>
+            </div>
+          </div>
+
+          <!-- Athlete Result 4 -->
+          <div class="wolf-result-card aspect-[9/16]" onclick="openWolfAthleteModal(4)">
+            <img 
+              src="/static/images/wolf_nutrition/results/athlete_result_4.jpg" 
+              alt="Wolf Nutrition Athlete Result 4" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 text-left">
+              <span class="bg-amber-400 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-full inline-block mb-1">
+                Verified Result ⭐
+              </span>
+              <div class="text-[11px] font-bold text-white leading-tight">Full Front Double Biceps</div>
+              <div class="text-[9px] text-amber-300 font-semibold">Contest Conditioning</div>
+            </div>
+          </div>
+
+          <!-- Athlete Result 5 -->
+          <div class="wolf-result-card aspect-[9/16]" onclick="openWolfAthleteModal(5)">
+            <img 
+              src="/static/images/wolf_nutrition/results/athlete_result_5.jpg" 
+              alt="Wolf Nutrition Athlete Result 5" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 text-left">
+              <span class="bg-amber-400 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-full inline-block mb-1">
+                Verified Result ⭐
+              </span>
+              <div class="text-[11px] font-bold text-white leading-tight">Symmetry & Vascularity</div>
+              <div class="text-[9px] text-amber-300 font-semibold">Pure Protein Recovery</div>
+            </div>
+          </div>
+
+          <!-- Athlete Result 6 -->
+          <div class="wolf-result-card aspect-[9/16]" onclick="openWolfAthleteModal(6)">
+            <img 
+              src="/static/images/wolf_nutrition/results/athlete_result_6.jpg" 
+              alt="Wolf Nutrition Athlete Result 6" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 text-left">
+              <span class="bg-amber-400 text-slate-950 text-[9px] font-black px-2 py-0.5 rounded-full inline-block mb-1">
+                Verified Result ⭐
+              </span>
+              <div class="text-[11px] font-bold text-white leading-tight">Shoulder Striations</div>
+              <div class="text-[9px] text-amber-300 font-semibold">Peak Athletic Power</div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -1228,6 +1866,69 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- 4. WOLF ATHLETE RESULT LIGHTBOX MODAL -->
+  <div id="wolfAthleteModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative bg-slate-900 border border-amber-500/40 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl text-white p-6">
+      <button 
+        onclick="closeWolfAthleteModal()"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-amber-400 flex items-center justify-center text-sm transition z-20 border border-slate-700"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex flex-col sm:flex-row gap-6 items-center">
+        <!-- Photo Container -->
+        <div class="w-full sm:w-1/2 aspect-[9/16] max-h-[460px] rounded-2xl overflow-hidden border border-amber-500/30 bg-black flex items-center justify-center">
+          <img id="wolfAthleteModalImg" src="" alt="Wolf Nutrition Athlete Result" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Details -->
+        <div class="w-full sm:w-1/2 space-y-4 text-left">
+          <div class="inline-flex items-center space-x-1.5 bg-amber-400/20 text-amber-300 border border-amber-400/40 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider">
+            <i class="fa-solid fa-trophy text-amber-400"></i>
+            <span>Verified Wolf Athlete</span>
+          </div>
+
+          <h3 id="wolfAthleteModalTitle" class="text-xl font-black text-white"></h3>
+          <p id="wolfAthleteModalDesc" class="text-xs text-slate-300 leading-relaxed"></p>
+
+          <div class="space-y-2 bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-xs">
+            <div class="flex items-center justify-between text-slate-300">
+              <span>Primary Fuel:</span>
+              <span class="font-bold text-amber-400">The Wolf 100% Whey Isolate</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-300">
+              <span>Daily Intake:</span>
+              <span class="font-bold text-white">2 Scoops (54g Protein)</span>
+            </div>
+            <div class="flex items-center justify-between text-slate-300">
+              <span>Key Benefit:</span>
+              <span class="font-bold text-emerald-400">Zero Water Retention / Zero Bloat</span>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-col gap-2">
+            <button 
+              onclick="buyNow('SAGA-WOLF-001'); closeWolfAthleteModal();"
+              class="w-full py-3 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-slate-950 font-black text-xs rounded-xl shadow-lg transition flex items-center justify-center space-x-1.5"
+            >
+              <i class="fa-solid fa-bolt"></i>
+              <span>Order This Protein Now (₹2,899)</span>
+            </button>
+            <a 
+              href="https://wa.me/919922163722?text=Hello%20SAGA%2C%20I%20want%20to%20order%20The%20Wolf%20Nutrition%20Whey%20Protein%20seen%20in%20the%20results%20section"
+              target="_blank"
+              class="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl transition text-center flex items-center justify-center space-x-2"
+            >
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <span>Consult on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

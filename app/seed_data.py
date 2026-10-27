@@ -10,6 +10,13 @@ CATEGORIES = [
         "image_url": "/static/images/banners/showcase_3d_circular_podium.jpg"
     },
     {
+        "id": "cat-wolf-nutrition",
+        "name": "The Wolf Nutrition 🐺",
+        "slug": "wolf-nutrition",
+        "icon": "fa-solid fa-dumbbell",
+        "image_url": "/static/images/wolf_nutrition/wolf_logo_circle.jpg"
+    },
+    {
         "id": "cat-desk-decor",
         "name": "Desk Decor & Divine",
         "slug": "desk-decor",
@@ -68,6 +75,123 @@ CATEGORIES = [
 ]
 
 PRODUCTS = [
+    # --- 0. THE WOLF NUTRITION (Exclusive Brand Partnership) ---
+    {
+        "id": "SAGA-WOLF-001",
+        "title": "The Wolf Enterprises 100% Pure Whey Isolate Protein (Chocolate Fury, 2.27kg / 5 LBS)",
+        "slug": "wolf-enterprises-pure-whey-isolate-chocolate-fury-5lbs",
+        "category": "wolf-nutrition",
+        "deodap_sku": "DD-WOLF-WPI-CHOC",
+        "wholesale_price": 1450.0,
+        "selling_price": 2899.0,
+        "mrp": 5499.0,
+        "stock": 65,
+        "rating": 5.0,
+        "review_count": 540,
+        "badge": "Lead With Strength 🐺",
+        "description": "Supercharge your lean muscle gains and explosive recovery with The Wolf Enterprises Chocolate Fury Premium 100% Whey Isolate. Delivers 27g ultra-pure micro-filtered protein, 6.2g BCAAs, and 5.1g Glutamine per scoop with zero added sugars and zero bloating. Formulated for athletes who demand peak power.",
+        "features": [
+            "27g Ultra-Pure Cross-Flow Micro-Filtered Whey Isolate per Serving",
+            "Rich Chocolate Fury Gourmet Flavor with Instant Smooth Mixability",
+            "6.2g Naturally Occurring BCAAs & 5.1g Glutamine for Rapid Muscle Repair",
+            "Zero Added Sugar, Zero Gluten, Under 1g Fat & Low Carb",
+            "DigeZyme Digestive Enzyme Complex for Zero Gas, Bloat or Discomfort"
+        ],
+        "image_url": "/static/images/wolf_nutrition/wolf_whey_chocolate.jpg",
+        "gallery": [
+            "/static/images/wolf_nutrition/wolf_whey_chocolate.jpg",
+            "/static/images/wolf_nutrition/wolf_logo_banner.jpg",
+            "/static/images/wolf_nutrition/wolf_shaker.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-WOLF-002",
+        "title": "The Wolf Enterprises Vanilla Bean Fusion Ultra-Refined Whey Isolate (2.27kg / 5 LBS)",
+        "slug": "wolf-enterprises-vanilla-bean-fusion-whey-isolate-5lbs",
+        "category": "wolf-nutrition",
+        "deodap_sku": "DD-WOLF-WPI-VANL",
+        "wholesale_price": 1450.0,
+        "selling_price": 2899.0,
+        "mrp": 5499.0,
+        "stock": 50,
+        "rating": 4.9,
+        "review_count": 420,
+        "badge": "Ultra-Refined ⭐",
+        "description": "Experience silky smooth decadence and elite athletic fuel. Handcrafted with authentic Madagascar vanilla bean infusion, this ultra-refined whey protein isolate supplies pristine amino acids directly into muscle fibers for immediate anabolic uptake.",
+        "features": [
+            "Ultra-Refined Micro-Filtered Pure Whey Protein Isolate",
+            "27g Pure Protein & Only 1g Carb per 32g Serving",
+            "Natural Madagascar Vanilla Bean Infusion for Shakes, Oats & Smoothies",
+            "Includes Precision Stainless Steel Measuring Scoop",
+            "Accelerates Lean Muscle Building, Vascularity & Fat Loss"
+        ],
+        "image_url": "/static/images/wolf_nutrition/wolf_whey_vanilla.jpg",
+        "gallery": [
+            "/static/images/wolf_nutrition/wolf_whey_vanilla.jpg",
+            "/static/images/wolf_nutrition/wolf_shaker.jpg",
+            "/static/images/wolf_nutrition/wolf_logo_circle.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-WOLF-003",
+        "title": "The Wolf Enterprises Ultimate Muscle Recovery Formula Whey Isolate (Gold Edition Metal Tub)",
+        "slug": "wolf-enterprises-ultimate-muscle-recovery-whey-isolate-gold",
+        "category": "wolf-nutrition",
+        "deodap_sku": "DD-WOLF-WPI-RCVR",
+        "wholesale_price": 1600.0,
+        "selling_price": 3199.0,
+        "mrp": 5999.0,
+        "stock": 40,
+        "rating": 5.0,
+        "review_count": 388,
+        "badge": "Pro Formula 🥇",
+        "description": "The crown jewel of athletic nutrition. Packaged in a signature heavyweight metallic tub, this ultimate recovery formula combines cold-filtered isolate peptides with micronized bio-actives to accelerate intra-muscular glycogen replenishment and maximize muscle hardness.",
+        "features": [
+            "Signature Metallic Gold Tub - Advanced Hydrolyzed & Whey Isolate Matrix",
+            "Fortified with Micronized Bioactive Recovery Peptides for Intense Pumps",
+            "Cold Cross-Flow Microfiltration (CFM) Preserves All Immunoglobulins",
+            "Tested by Independent Third-Party Labs for 100% Purity & Label Accuracy",
+            "Zero Amino Spiking Guarantee - Formulated for Serious Bodybuilders"
+        ],
+        "image_url": "/static/images/wolf_nutrition/wolf_whey_recovery.jpg",
+        "gallery": [
+            "/static/images/wolf_nutrition/wolf_whey_recovery.jpg",
+            "/static/images/wolf_nutrition/wolf_whey_chocolate.jpg",
+            "/static/images/wolf_nutrition/wolf_shaker.jpg"
+        ],
+        "is_trending": 1
+    },
+    {
+        "id": "SAGA-WOLF-004",
+        "title": "The Wolf Strength Heavy-Duty Brushed Stainless Steel Gym Shaker Bottle (750ml, Leak-Proof)",
+        "slug": "wolf-strength-heavy-duty-stainless-steel-shaker-bottle-750ml",
+        "category": "wolf-nutrition",
+        "deodap_sku": "DD-WOLF-SHKR-750",
+        "wholesale_price": 220.0,
+        "selling_price": 599.0,
+        "mrp": 1499.0,
+        "stock": 150,
+        "rating": 4.9,
+        "review_count": 670,
+        "badge": "Wolf Strength 🐾",
+        "description": "Say goodbye to smelly, cracked plastic shakers forever. Built from 100% food-grade 304 brushed stainless steel with laser-etched Wolf Strength paw emblem. Double-wall sweat-proof exterior keeps pre-workouts and BCAAs ice cold for up to 12 hours.",
+        "features": [
+            "Food-Grade 304 Brushed Stainless Steel - Never Holds Odors or Plastic Aftertaste",
+            "Double-Wall Thermal Insulation Keeps Liquids Cold for 12 Hours",
+            "Patented Cyclone Mixing Whisk Grate for 100% Lump-Free Protein Drinks",
+            "Leak-Proof Push-Button Flip Cap Lock with Integrated Heavy-Duty Carry Ring",
+            "Laser-Etched Wolf Strength Paw Logo - Scratch-Proof & Built for Lifetime Use"
+        ],
+        "image_url": "/static/images/wolf_nutrition/wolf_shaker.jpg",
+        "gallery": [
+            "/static/images/wolf_nutrition/wolf_shaker.jpg",
+            "/static/images/wolf_nutrition/wolf_whey_vanilla.jpg",
+            "/static/images/wolf_nutrition/wolf_logo_banner.jpg"
+        ],
+        "is_trending": 1
+    },
     # --- 1. USER UPLOADED 5 PRODUCTS ---
     {
         "id": "SAGA-DEC-001",
